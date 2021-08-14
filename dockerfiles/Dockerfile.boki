@@ -1,0 +1,23 @@
+FROM ubuntu:focal as builder
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=America/Chicago
+RUN apt update && \
+    apt upgrade -y && \
+    apt install -y g++ clang make cmake pkg-config autoconf automake libtool curl unzip
+
+WORKDIR /boki
+COPY . .
+RUN ./build_deps.sh --use-clang
+RUN CXX=clang++ make -j $(nproc)
+
+FROM ubuntu:focal as release
+
+COPY . /src/boki
+
+COPY --from=builder /boki/bin/release/gateway    /boki/gateway
+COPY --from=builder /boki/bin/release/engine     /boki/engine
+COPY --from=builder /boki/bin/release/launcher   /boki/launcher
+COPY --from=builder /boki/bin/release/sequencer  /boki/sequencer
+COPY --from=builder /boki/bin/release/controller /boki/controller
+
+WORKDIR /boki
