@@ -105,21 +105,6 @@ def find_instance_role(role_name):
     cli_output = run_aws_command('iam', ['get-instance-profile', '--instance-profile-name', role_name])
     return cli_output['InstanceProfile']['Arn']
 
-def start_instances(machine_configs, instance_role):
-    security_group_id = find_security_group_id()
-    results = {}
-    for name, config in machine_configs.items():
-        try:
-            machine_info = start_ec2_instance(name, config['type'], security_group_id, instance_role)
-            machine_info['role'] = config['role']
-            if 'labels' in config:
-                machine_info['labels'] = config['labels']
-            results[name] = machine_info
-        except Exception as e:
-            stop_instances(results)
-            raise e
-    return results
-
 def start_spot_instances(machine_configs, waiting_time, instance_role):
     security_group_id = find_security_group_id()
     spot_requests = {}
@@ -202,7 +187,7 @@ def setup_docker_swarm_for_machines(machine_infos):
             cmd.append(name)
             run_remote_command(machine_infos[manager_machine]['dns'], cmd)
 
-def start_machines_main(base_dir, use_spot_instances,
+def start_machines_main(base_dir,
                         spot_instances_waiting_time,
                         instance_iam_role):
     if os.path.exists(os.path.join(base_dir, 'machines.json')):
@@ -212,11 +197,8 @@ def start_machines_main(base_dir, use_spot_instances,
     instance_role = None
     if instance_iam_role is not None and len(instance_iam_role) > 0:
         instance_role = find_instance_role(instance_iam_role)
-    if use_spot_instances:
-        machine_infos = start_spot_instances(
-            config['machines'], spot_instances_waiting_time, instance_role)
-    else:
-        machine_infos = start_instances(config['machines'], instance_role)
+    machine_infos = start_spot_instances(
+        config['machines'], spot_instances_waiting_time, instance_role)
     try:
         time.sleep(60)
         start_time = time.time()
@@ -372,14 +354,13 @@ if __name__ == '__main__':
     parser.add_argument('--machine-label', type=str, default=None)
     parser.add_argument('--machine-host', type=str, default=None)
     parser.add_argument('--service', type=str, default=None)
-    parser.add_argument('--use-spot-instances', action='store_true')
     parser.add_argument('--spot-instances-waiting-time', type=int, default=10)
     parser.add_argument('--instance-iam-role', type=str, default=None)
     parser.add_argument('--log-path', type=str, default=None)
     args = parser.parse_args()
     try:
         if args.cmd == 'start-machines':
-            start_machines_main(args.base_dir, args.use_spot_instances,
+            start_machines_main(args.base_dir,
                                 args.spot_instances_waiting_time,
                                 args.instance_iam_role)
         elif args.cmd == 'stop-machines':

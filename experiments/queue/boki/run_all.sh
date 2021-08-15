@@ -4,7 +4,7 @@ ROOT_DIR=`realpath $BASE_DIR/../../..`
 
 HELPER_SCRIPT=$ROOT_DIR/scripts/exp_helper
 
-$HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --use-spot-instances
+$HELPER_SCRIPT start-machines --base-dir=$BASE_DIR
 
 $BASE_DIR/run_once.sh p64c64   64  6 1 64
 $BASE_DIR/run_once.sh p128c128 128 6 1 128
