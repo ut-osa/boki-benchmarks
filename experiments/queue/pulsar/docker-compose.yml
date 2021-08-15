@@ -1,0 +1,122 @@
+version: "3.8"
+services:
+  zookeeper:
+    image: zookeeper:3.6.2
+    hostname: zookeeper
+    ports:
+      - 2181:2181
+    restart: always
+
+  zookeeper-setup:
+    image: zookeeper:3.6.2
+    command: /tmp/boki/zk_setup.sh
+    depends_on:
+       - zookeeper
+    volumes:
+      - /tmp/zk_setup.sh:/tmp/boki/zk_setup.sh
+    restart: always
+
+  pulsar-setup:
+    image: apachepulsar/pulsar:2.7.0
+    command: /pulsar/conf/init.sh
+    depends_on:
+       - zookeeper
+    volumes:
+      - /tmp/pulsar/conf:/pulsar/conf
+    restart: always
+
+  pulsar-broker:
+    image: apachepulsar/pulsar:2.7.0
+    hostname: pulsar-broker-{{.Task.Slot}}
+    command: bin/pulsar broker
+    depends_on:
+      - pulsar-setup
+    volumes:
+      - /tmp/pulsar/conf:/pulsar/conf
+    deploy:
+      endpoint_mode: dnsrr
+    restart: always
+
+  pulsar-bookie:
+    image: apachepulsar/pulsar:2.7.0
+    hostname: pulsar-bookie-{{.Task.Slot}}
+    command: bin/pulsar bookie
+    depends_on:
+      - pulsar-setup
+    volumes:
+      - /tmp/pulsar/conf:/pulsar/conf
+      - /mnt/storage/pulsar:/pulsar/data
+    restart: always
+
+  boki-engine:
+    image: zjia/boki:sosp-ae
+    hostname: faas-engine-{{.Task.Slot}}
+    entrypoint:
+      - /boki/engine
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --root_path_for_ipc=/tmp/boki/ipc
+      - --func_config_file=/tmp/boki/func_config.json
+      - --num_io_workers=4
+      - --instant_rps_p_norm=0.8
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+      - /sys/fs/cgroup:/tmp/root_cgroupfs
+    environment:
+      - FAAS_NODE_ID={{.Task.Slot}}
+      - FAAS_CGROUP_FS_ROOT=/tmp/root_cgroupfs
+    restart: always
+
+  boki-gateway:
+    image: zjia/boki:sosp-ae
+    hostname: faas-gateway
+    ports:
+      - 8080:8080
+    entrypoint:
+      - /boki/gateway
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --http_port=8080
+      - --func_config_file=/tmp/boki/func_config.json
+      - --num_io_workers=2
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      - --lb_per_fn_round_robin
+      - --max_running_requests=0
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    volumes:
+      - /tmp/nightcore_config.json:/tmp/boki/func_config.json
+    restart: always
+
+  consumer-fn:
+    image: zjia/boki-queuebench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/queuebench-bin/main", "2"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=4
+      - GOGC=200
+      - PULSAR_URL=pulsar://pulsar-broker:6650
+    depends_on:
+      - boki-engine
+    restart: always
+
+  producer-fn:
+    image: zjia/boki-queuebench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/queuebench-bin/main", "1"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=4
+      - GOGC=200
+      - PULSAR_URL=pulsar://pulsar-broker:6650
+    depends_on:
+      - boki-engine
+    restart: always
