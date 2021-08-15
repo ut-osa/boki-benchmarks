@@ -31,7 +31,7 @@ for host in $ALL_HOSTS; do
     scp -q $BASE_DIR/nightcore_config.json $host:/tmp/nightcore_config.json
 done
 
-ALL_ENGINE_HOSTS=`$HELPER_SCRIPT get-machine-with-label --machine-label=engine_node`
+ALL_ENGINE_HOSTS=`$HELPER_SCRIPT get-machine-with-label --base-dir=$BASE_DIR --machine-label=engine_node`
 for HOST in $ALL_ENGINE_HOSTS; do
     scp -q $BASE_DIR/run_launcher $HOST:/tmp/run_launcher
     ssh -q $HOST -- sudo rm -rf /mnt/inmem/boki
@@ -41,7 +41,7 @@ for HOST in $ALL_ENGINE_HOSTS; do
     ssh -q $HOST -- sudo cp /tmp/nightcore_config.json /mnt/inmem/boki/func_config.json
 done
 
-ALL_STORAGE_HOSTS=`$HELPER_SCRIPT get-machine-with-label --machine-label=storage_node`
+ALL_STORAGE_HOSTS=`$HELPER_SCRIPT get-machine-with-label --base-dir=$BASE_DIR --machine-label=storage_node`
 for HOST in $ALL_STORAGE_HOSTS; do
     ssh -q $HOST -- sudo rm -rf   /mnt/storage/logdata
     ssh -q $HOST -- sudo mkdir -p /mnt/storage/logdata
@@ -52,7 +52,7 @@ ssh -q $MANAGER_HOST -- docker stack deploy \
 sleep 60
 
 for HOST in $ALL_ENGINE_HOSTS; do
-    ENGINE_CONTAINER_ID=`$HELPER_SCRIPT get-container-id --service faas-engine --machine-host $HOST`
+    ENGINE_CONTAINER_ID=`$HELPER_SCRIPT get-container-id --base-dir=$BASE_DIR --service faas-engine --machine-host $HOST`
     echo 4096 | ssh -q $HOST -- sudo tee /sys/fs/cgroup/cpu,cpuacct/docker/$ENGINE_CONTAINER_ID/cpu.shares
 done
 
