@@ -1,0 +1,32 @@
+{
+    "machines": {
+        "bokiexp-gateway": { "type": "c5d.2xlarge", "role": "manager" },
+        "bokiexp-engine-1": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-2": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-3": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-4": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-5": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-6": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-7": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-8": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-storage-1": { "type": "c5d.4xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-storage-2": { "type": "c5d.4xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-storage-3": { "type": "c5d.4xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-client": { "type": "c5d.xlarge", "role": "client" }
+    },
+    "services": {
+        "zookeeper": { "placement": "bokiexp-gateway" },
+        "zookeeper-setup": { "placement": "bokiexp-gateway" },
+        "mongodb": { "placement_label": "storage_node", "replicas": 3 },
+        "mongodb-setup": { "placement": "bokiexp-gateway" },
+        "boki-gateway": { "placement": "bokiexp-gateway" },
+        "boki-engine": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-init": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-register": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-login": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-profile": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-follow": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-post": { "placement_label": "engine_node", "replicas": 8 },
+        "retwis-post-list": { "placement_label": "engine_node", "replicas": 8 }
+    }
+}
