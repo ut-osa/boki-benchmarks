@@ -67,6 +67,7 @@ Then it executes evaluation workloads with different QPS targets via `run_once.s
 `run_once.sh` script performs workload-specific setups, runs `wrk2` to measure latency distribution under the target QPS,
 and stores results in `results` directory.
 When everything is done, `run_all.sh` script terminates all provisioned experiment VMs.
+(TO CHECK AND REVISE)
 
 VM provisioning is done by `scripts/exp_helper` with sub-command `start-machines`.
 By default, it creates on-demand EC2 instances. But it also supports the option to
@@ -82,4 +83,4 @@ TODO
 
 * [Boki](https://github.com/ut-osa/boki) is licensed under Apache License 2.0.
 * BokiFlow (`workloads/workflow`) derives from [Beldi codebase](https://github.com/eniac/Beldi). BokiFlow is licensed under MIT License, in accordance with Beldi.
-* All source code in this repository is licensed under Apache License 2.0.
+* All other source code in this repository is licensed under Apache License 2.0.
