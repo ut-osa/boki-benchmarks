@@ -19,9 +19,9 @@ $HELPER_SCRIPT generate-docker-compose --base-dir=$BASE_DIR
 scp -q $BASE_DIR/docker-compose.yml $MANAGER_HOST:~
 scp -q $BASE_DIR/docker-compose-generated.yml $MANAGER_HOST:~
 
-# ssh -q $MANAGER_HOST -- docker stack rm boki-experiment
+ssh -q $MANAGER_HOST -- docker stack rm boki-experiment
 
-# sleep 40
+sleep 40
 
 scp -q $ROOT_DIR/scripts/zk_setup.sh $MANAGER_HOST:/tmp/zk_setup.sh
 

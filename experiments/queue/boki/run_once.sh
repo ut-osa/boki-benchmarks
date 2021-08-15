@@ -79,9 +79,3 @@ ssh -q $CLIENT_HOST -- /tmp/benchmark \
     --payload_size=1024 --duration=180 >$EXP_DIR/results.log
 
 $HELPER_SCRIPT collect-container-logs --base-dir=$BASE_DIR --log-path=$EXP_DIR/logs
-
-for name in $ALL_ENGINE_NODES; do
-    HOST=`$HELPER_SCRIPT get-host --base-dir=$BASE_DIR --machine-name=$name`
-    mkdir $EXP_DIR/logs/func_worker_$name
-    rsync -arq $HOST:/mnt/inmem/boki/output/* $EXP_DIR/logs/func_worker_$name
-done
