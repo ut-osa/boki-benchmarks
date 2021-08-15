@@ -11,16 +11,28 @@ function build_boki {
         $ROOT_DIR/boki
 }
 
-function push_boki {
-    docker push zjia/boki:sosp-ae
+function build_queuebench {
+    docker build -t zjia/boki-queuebench:sosp-ae \
+        -f $ROOT_DIR/dockerfiles/Dockerfile.queuebench \
+        $ROOT_DIR/workloads/queue
+}
+
+function build_retwisbench {
+    docker build -t zjia/boki-retwisbench:sosp-ae \
+        -f $ROOT_DIR/dockerfiles/Dockerfile.retwisbench \
+        $ROOT_DIR/workloads/retwis
 }
 
 function build {
     build_boki
+    build_queuebench
+    build_retwisbench
 }
 
 function push {
-    push_boki
+    docker push zjia/boki:sosp-ae
+    docker push zjia/boki-queuebench:sosp-ae
+    docker push zjia/boki-retwisbench:sosp-ae
 }
 
 case "$1" in
