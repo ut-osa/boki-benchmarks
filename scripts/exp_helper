@@ -322,21 +322,22 @@ def get_machine_with_label_main(base_dir, label):
             if label in labels or label+'=true' in labels:
                 print(machine_info['dns'])
 
-def get_container_id_main(base_dir, service_name, machine_name):
+def get_container_id_main(base_dir, service_name, machine_name, machine_host):
     if not os.path.exists(os.path.join(base_dir, 'machines.json')):
         raise Exception('Machines not started')
     with open(os.path.join(base_dir, 'machines.json')) as fin:
         machine_infos = json.load(fin)
-    if machine_name is None:
-        with open(os.path.join(base_dir, 'config.json')) as fin:
-            config = json.load(fin)
-        machine_name = config['services'][service_name]['placement']
-    machine_info = machine_infos[machine_name]
-    short_id, _ = run_remote_command(machine_info['dns'],
+    if machine_host is None:
+        if machine_name is None:
+            with open(os.path.join(base_dir, 'config.json')) as fin:
+                config = json.load(fin)
+            machine_name = config['services'][service_name]['placement']
+        machine_host = machine_infos[machine_name]['dns']
+    short_id, _ = run_remote_command(machine_host,
                                      ['docker', 'ps', '-q', '-f', 'name='+service_name])
     short_id = short_id.strip()
     if short_id != '':
-        container_info, _ = run_remote_command(machine_info['dns'], ['docker', 'inspect', short_id])
+        container_info, _ = run_remote_command(machine_host, ['docker', 'inspect', short_id])
         container_info = json.loads(container_info)[0]
         print(container_info['Id'])
 
@@ -369,6 +370,7 @@ if __name__ == '__main__':
     parser.add_argument('--base-dir', type=str, default='.')
     parser.add_argument('--machine-name', type=str, default=None)
     parser.add_argument('--machine-label', type=str, default=None)
+    parser.add_argument('--machine-host', type=str, default=None)
     parser.add_argument('--service', type=str, default=None)
     parser.add_argument('--use-spot-instances', action='store_true')
     parser.add_argument('--spot-instances-waiting-time', type=int, default=10)
@@ -397,7 +399,7 @@ if __name__ == '__main__':
         elif args.cmd == 'get-machine-with-label':
             get_machine_with_label_main(args.base_dir, args.machine_label)
         elif args.cmd == 'get-container-id':
-            get_container_id_main(args.base_dir, args.service, args.machine_name)
+            get_container_id_main(args.base_dir, args.service, args.machine_name, args.machine_host)
         elif args.cmd == 'collect-container-logs':
             collect_container_logs_main(args.base_dir, args.log_path)
         else:
