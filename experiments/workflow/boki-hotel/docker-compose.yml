@@ -1,0 +1,268 @@
+version: "3.8"
+services:
+  zookeeper:
+    image: zookeeper:3.6.2
+    hostname: zookeeper
+    ports:
+      - 2181:2181
+    restart: always
+
+  zookeeper-setup:
+    image: zookeeper:3.6.2
+    command: /tmp/boki/zk_setup.sh
+    depends_on:
+       - zookeeper
+    volumes:
+      - /tmp/zk_setup.sh:/tmp/boki/zk_setup.sh
+    restart: always
+
+  boki-engine:
+    image: zjia/boki:sosp-ae
+    hostname: boki-engine-{{.Task.Slot}}
+    entrypoint:
+      - /boki/engine
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --root_path_for_ipc=/tmp/boki/ipc
+      - --func_config_file=/tmp/boki/func_config.json
+      - --num_io_workers=4
+      - --instant_rps_p_norm=0.8
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      - --enable_shared_log
+      - --slog_engine_enable_cache
+      - --slog_engine_cache_cap_mb=1024
+      - --slog_engine_propagate_auxdata
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+      - /sys/fs/cgroup:/tmp/root_cgroupfs
+    environment:
+      - FAAS_NODE_ID={{.Task.Slot}}
+      - FAAS_CGROUP_FS_ROOT=/tmp/root_cgroupfs
+    restart: always
+
+  boki-controller:
+    image: zjia/boki:sosp-ae
+    entrypoint:
+      - /boki/controller
+      - --zookeeper_host=zookeeper:2181
+      - --metalog_replicas=3
+      - --userlog_replicas=3
+      - --index_replicas=8
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    restart: always
+
+  boki-gateway:
+    image: zjia/boki:sosp-ae
+    hostname: faas-gateway
+    ports:
+      - 8080:8080
+    entrypoint:
+      - /boki/gateway
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --http_port=8080
+      - --func_config_file=/tmp/boki/func_config.json
+      - --async_call_result_path=/tmp/store/async_results
+      - --num_io_workers=2
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      - --lb_per_fn_round_robin
+      - --max_running_requests=0
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    volumes:
+      - /tmp/nightcore_config.json:/tmp/boki/func_config.json
+      - /mnt/inmem/store:/tmp/store
+    restart: always
+
+  boki-storage:
+    image: zjia/boki:sosp-ae
+    hostname: faas-storage-{{.Task.Slot}}
+    entrypoint:
+      - /boki/storage
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --db_path=/tmp/storage/logdata
+      - --num_io_workers=2
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      - --slog_local_cut_interval_us=300
+      - --slog_storage_bgthread_interval_ms=1
+      - --slog_storage_backend=rocksdb
+      - --slog_storage_cache_cap_mb=4096
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    volumes:
+      - /mnt/storage:/tmp/storage
+    environment:
+      - FAAS_NODE_ID={{.Task.Slot}}
+    restart: always
+
+  boki-sequencer:
+    image: zjia/boki:sosp-ae
+    hostname: faas-sequencer-{{.Task.Slot}}
+    entrypoint:
+      - /boki/sequencer
+      - --zookeeper_host=zookeeper:2181
+      - --listen_iface=eth0
+      - --num_io_workers=2
+      - --io_uring_entries=2048
+      - --io_uring_fd_slots=4096
+      - --slog_global_cut_interval_us=300
+      # - --v=1
+    depends_on:
+      - zookeeper-setup
+    environment:
+      - FAAS_NODE_ID={{.Task.Slot}}
+    restart: always
+
+  geo-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/geo", "1"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  profile-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/profile", "2"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  rate-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/rate", "3"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  recommendation-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/recommendation", "4"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  user-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/user", "5"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  hotel-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/hotel", "6"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  search-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/search", "7"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  flight-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/flight", "8"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  order-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/order", "9"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  frontend-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/frontend", "10"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always
+
+  gateway-service:
+    image: zjia/boki-beldibench:sosp-ae
+    entrypoint: ["/tmp/boki/run_launcher", "/bokiflow-bin/hotel/gateway", "11"]
+    volumes:
+      - /mnt/inmem/boki:/tmp/boki
+    environment:
+      - FAAS_GO_MAX_PROC_FACTOR=8
+      - GOGC=1000
+      - TABLE_PREFIX=${TABLE_PREFIX:?}
+    depends_on:
+      - boki-engine
+    restart: always

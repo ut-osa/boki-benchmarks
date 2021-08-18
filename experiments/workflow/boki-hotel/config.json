@@ -1,0 +1,41 @@
+{
+    "machines": {
+        "bokiexp-gateway": { "type": "c5d.2xlarge", "role": "manager" },
+        "bokiexp-sequencer-1": { "type": "c5d.2xlarge", "role": "worker", "labels": ["sequencer_node=true"] },
+        "bokiexp-sequencer-2": { "type": "c5d.2xlarge", "role": "worker", "labels": ["sequencer_node=true"] },
+        "bokiexp-sequencer-3": { "type": "c5d.2xlarge", "role": "worker", "labels": ["sequencer_node=true"] },
+        "bokiexp-engine-1": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-2": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-3": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-4": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-5": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-6": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-7": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-engine-8": { "type": "c5d.2xlarge", "role": "worker", "labels": [ "engine_node=true" ] },
+        "bokiexp-storage-1": { "type": "c5d.2xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-storage-2": { "type": "c5d.2xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-storage-3": { "type": "c5d.2xlarge", "role": "worker", "mount_instance_storage": "nvme1n1", "labels": ["storage_node=true"] },
+        "bokiexp-client": { "type": "c5d.xlarge", "role": "client" }
+    },
+    "services": {
+        "zookeeper": { "placement": "bokiexp-gateway" },
+        "zookeeper-setup": { "placement": "bokiexp-gateway" },
+        "boki-controller": { "placement": "bokiexp-gateway" },
+        "boki-gateway": { "placement": "bokiexp-gateway" },
+        "boki-storage": { "placement_label": "storage_node", "replicas": 3 },
+        "boki-sequencer": { "placement_label": "sequencer_node", "replicas": 3 },
+        "boki-engine": { "placement_label": "engine_node", "replicas": 8 },
+        "geo-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "profile-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "rate-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "recommendation-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "user-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "hotel-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "search-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "flight-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "order-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "frontend-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true },
+        "gateway-service": { "placement_label": "engine_node", "replicas": 8, "need_aws_env": true, "mount_certs": true }
+    },
+    "aws_region": "us-east-2"
+}
