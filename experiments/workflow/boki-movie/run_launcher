@@ -1,0 +1,9 @@
+#!/bin/bash
+
+/boki/launcher \
+    --fprocess_mode=go \
+    --root_path_for_ipc=/tmp/boki/ipc \
+    --fprocess_output_dir=/tmp/boki/output \
+    --hostname_in_output_fname \
+    --fprocess="$1" \
+    --func_id=$2
