@@ -7,9 +7,9 @@ COPY --from=boki /src/boki /src/boki
 RUN cd /workflow/beldi && make hotel-baseline
 RUN cd /workflow/beldi && make media-baseline
 RUN cd /workflow/beldi && make hotel
-RUN cd /workflow/beldi && make hotel
+RUN cd /workflow/beldi && make media
 RUN cd /workflow/boki && make hotel
-RUN cd /workflow/boki && make hotel
+RUN cd /workflow/boki && make media
 
 FROM ubuntu:focal
 
