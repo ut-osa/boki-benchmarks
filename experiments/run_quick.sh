@@ -105,7 +105,6 @@ $HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --instance-iam-role $BOKI_MAC
 
 $BASE_DIR/run_once.sh qps100 100
 $BASE_DIR/run_once.sh qps200 200
-$BASE_DIR/run_once.sh qps300 300
 
 $HELPER_SCRIPT stop-machines --base-dir=$BASE_DIR
 
@@ -113,7 +112,6 @@ BASE_DIR=$ROOT_DIR/experiments/workflow/boki-movie
 
 $HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --instance-iam-role $BOKI_MACHINE_IAM
 
-$BASE_DIR/run_once.sh qps50  50
 $BASE_DIR/run_once.sh qps100 100
 $BASE_DIR/run_once.sh qps150 150
 
@@ -135,7 +133,6 @@ $HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --instance-iam-role $BOKI_MAC
 
 $BASE_DIR/run_once.sh qps100 100
 $BASE_DIR/run_once.sh qps200 200
-$BASE_DIR/run_once.sh qps300 300
 
 $HELPER_SCRIPT stop-machines --base-dir=$BASE_DIR
 
@@ -143,7 +140,6 @@ BASE_DIR=$ROOT_DIR/experiments/workflow/beldi-movie
 
 $HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --instance-iam-role $BOKI_MACHINE_IAM
 
-$BASE_DIR/run_once.sh qps50  50
 $BASE_DIR/run_once.sh qps100 100
 $BASE_DIR/run_once.sh qps150 150
 
