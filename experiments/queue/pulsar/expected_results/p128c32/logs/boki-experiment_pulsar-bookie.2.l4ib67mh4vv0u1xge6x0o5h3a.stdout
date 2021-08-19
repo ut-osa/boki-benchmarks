@@ -1,0 +1,447 @@
+23:21:52.051 [main] INFO  org.apache.bookkeeper.server.Main - Using configuration file /pulsar/conf/bookkeeper.conf
+23:21:52.057 [main] INFO  org.apache.bookkeeper.server.Main - Hello, I'm your bookie, bookieId is <not-set>, listening on port 3181. Metadata service uri is zk+null://zookeeper:2181/ledgers. Journals are in [data/bookkeeper/journal]. Ledgers are stored in [data/bookkeeper/ledgers].
+23:21:52.064 [main] INFO  org.apache.bookkeeper.server.Main - Load lifecycle component : org.apache.bookkeeper.server.service.StatsProviderService
+23:21:52.080 [main] INFO  org.apache.bookkeeper.proto.BookieServer - {
+  "ledgerDirectories" : "data/bookkeeper/ledgers",
+  "listeningInterface" : "eth0",
+  "zkServers" : "zookeeper:2181",
+  "journalDirectory" : "data/bookkeeper/journal"
+}
+23:21:52.227 [main] INFO  org.apache.bookkeeper.proto.BookieNettyServer - Binding bookie-rpc endpoint to /10.0.2.118:3181
+23:21:52.268 [main] INFO  org.apache.bookkeeper.meta.MetadataDrivers - BookKeeper metadata driver manager initialized
+23:21:52.274 [main] INFO  org.apache.bookkeeper.meta.zk.ZKMetadataDriverBase - Initialize zookeeper metadata driver at metadata service uri zk+null://zookeeper:2181/ledgers : zkServers = zookeeper:2181, ledgersRootPath = /ledgers.
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.5.7-f0fdd52973d373ffd9c86b81d99842dc2c7f660e, built on 02/10/2020 11:30 GMT
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:host.name=pulsar-bookie-2
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_275
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/local/openjdk-8/jre
+23:21:52.278 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/pulsar/conf:::/pulsar/lib/org.apache.pulsar-pulsar-broker-common-2.7.0.jar:/pulsar/lib/org.apache.avro-avro-1.9.1.jar:/pulsar/lib/io.prometheus-simpleclient_common-0.5.0.jar:/pulsar/lib/javax.validation-validation-api-1.1.0.Final.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-api-examples-2.7.0.jar:/pulsar/lib/commons-cli-commons-cli-1.2.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-api-2.7.0.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-server-4.12.0.jar:/pulsar/lib/com.google.protobuf-protobuf-java-util-3.11.4.jar:/pulsar/lib/com.fasterxml.jackson.core-jackson-databind-2.11.1.jar:/pulsar/lib/com.yahoo.datasketches-sketches-core-0.8.3.jar:/pulsar/lib/org.apache.httpcomponents-httpclient-4.5.5.jar:/pulsar/lib/org.apache.pulsar-pulsar-proxy-2.7.0.jar:/pulsar/lib/org.asynchttpclient-async-http-client-netty-utils-2.12.1.jar:/pulsar/lib/io.vertx-vertx-auth-common-3.5.3.jar:/pulsar/lib/io.vertx-vertx-web-3.5.3.jar:/pulsar/lib/jakarta.annotation-jakarta.annotation-api-1.3.5.jar:/pulsar/lib/org.apache.bookkeeper-bookkeeper-server-4.12.0.jar:/pulsar/lib/io.grpc-grpc-context-1.18.0.jar:/pulsar/lib/org.eclipse.jetty.websocket-javax-websocket-client-impl-9.4.33.v20201020.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-java-client-4.12.0.jar:/pulsar/lib/io.sundr-resourcecify-annotations-0.21.0.jar:/pulsar/lib/org.reactivestreams-reactive-streams-1.0.3.jar:/pulsar/lib/io.netty-netty-buffer-4.1.51.Final.jar:/pulsar/lib/io.prometheus-simpleclient_log4j2-0.5.0.jar:/pulsar/lib/io.kubernetes-client-java-api-9.0.2.jar:/pulsar/lib/io.sundr-sundr-core-0.21.0.jar:/pulsar/lib/com.typesafe.netty-netty-reactive-streams-2.0.4.jar:/pulsar/lib/commons-logging-commons-logging-1.1.1.jar:/pulsar/lib/org.apache.pulsar-protobuf-shaded-2.1.0-incubating.jar:/pulsar/lib/com.google.guava-listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/pulsar/lib/commons-configuration-commons-configuration-1.10.jar:/pulsar/lib/org.apache.logging.log4j-log4j-web-2.10.0.jar:/pulsar/lib/org.rocksdb-rocksdbjni-6.10.2.jar:/pulsar/lib/org.apache.logging.log4j-log4j-api-2.10.0.jar:/pulsar/lib/org.hamcrest-hamcrest-core-1.3.jar:/pulsar/lib/com.google.j2objc-j2objc-annotations-1.3.jar:/pulsar/lib/org.eclipse.jetty-jetty-servlets-9.4.33.v20201020.jar:/pulsar/lib/io.prometheus-simpleclient_jetty-0.5.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-zookeeper-2.7.0.jar:/pulsar/lib/org.glassfish.jersey.core-jersey-common-2.31.jar:/pulsar/lib/io.netty-netty-handler-4.1.51.Final.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-tools-2.7.0.jar:/pulsar/lib/io.netty-netty-codec-dns-4.1.51.Final.jar:/pulsar/lib/commons-codec-commons-codec-1.10.jar:/pulsar/lib/org.eclipse.jetty-jetty-continuation-9.4.33.v20201020.jar:/pulsar/lib/io.grpc-grpc-all-1.18.0.jar:/pulsar/lib/org.apache.bookkeeper-bookkeeper-common-4.12.0.jar:/pulsar/lib/org.glassfish.hk2-hk2-locator-2.6.1.jar:/pulsar/lib/org.apache.pulsar-bouncy-castle-bc-2.7.0-pkg.jar:/pulsar/lib/org.apache.httpcomponents-httpcore-4.4.9.jar:/pulsar/lib/org.slf4j-slf4j-api-1.7.25.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-original-2.7.0.jar:/pulsar/lib/io.dropwizard.metrics-metrics-core-3.1.0.jar:/pulsar/lib/org.eclipse.jetty.websocket-websocket-api-9.4.33.v20201020.jar:/pulsar/lib/org.eclipse.jetty-jetty-xml-9.4.33.v20201020.jar:/pulsar/lib/org.apache.bookkeeper.tests-stream-storage-tests-common-4.12.0.jar:/pulsar/lib/org.codehaus.mojo-animal-sniffer-annotations-1.17.jar:/pulsar/lib/org.apache.distributedlog-distributedlog-core-4.12.0-tests.jar:/pulsar/lib/org.apache.bookkeeper-circe-checksum-4.12.0.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-proto-4.12.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-broker-2.7.0.jar:/pulsar/lib/org.glassfish.hk2.external-aopalliance-repackaged-2.6.1.jar:/pulsar/lib/org.glassfish.hk2-osgi-resource-locator-1.0.3.jar:/pulsar/lib/org.glassfish.jersey.inject-jersey-hk2-2.31.jar:/pulsar/lib/org.glassfish.jersey.containers-jersey-container-servlet-2.31.jar:/pulsar/lib/org.apache.pulsar-pulsar-discovery-service-2.7.0.jar:/pulsar/lib/org.jvnet.mimepull-mimepull-1.9.13.jar:/pulsar/lib/org.joda-joda-convert-2.2.1.jar:/pulsar/lib/io.netty-netty-transport-native-epoll-4.1.51.Final-linux-x86_64.jar:/pulsar/lib/org.apache.bookkeeper.http-http-server-4.12.0.jar:/pulsar/lib/io.prometheus-simpleclient_httpserver-0.5.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-transaction-coordinator-2.7.0.jar:/pulsar/lib/net.java.dev.jna-jna-4.2.0.jar:/pulsar/lib/io.prometheus-simpleclient-0.5.0.jar:/pulsar/lib/com.squareup.okhttp-okhttp-2.5.0.jar:/pulsar/lib/org.checkerframework-checker-compat-qual-2.5.2.jar:/pulsar/lib/org.glassfish.hk2-hk2-api-2.6.1.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-api-4.12.0.jar:/pulsar/lib/commons-lang-commons-lang-2.6.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-worker-2.7.0.jar:/pulsar/lib/org.apache.thrift-libthrift-0.12.0.jar:/pulsar/lib/org.bouncycastle-bcprov-ext-jdk15on-1.66.jar:/pulsar/lib/org.glassfish.jersey.media-jersey-media-jaxb-2.31.jar:/pulsar/lib/org.eclipse.jetty-jetty-http-9.4.33.v20201020.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-auth-sasl-2.7.0.jar:/pulsar/lib/org.apache.yetus-audience-annotations-0.5.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-utils-2.7.0.jar:/pulsar/lib/org.apache.curator-curator-framework-4.0.1.jar:/pulsar/lib/io.vertx-vertx-bridge-common-3.5.3.jar:/pulsar/lib/org.apache.pulsar-pulsar-config-validation-2.7.0.jar:/pulsar/lib/org.glassfish.jersey.containers-jersey-container-servlet-core-2.31.jar:/pulsar/lib/org.apache.avro-avro-protobuf-1.9.1.jar:/pulsar/lib/org.inferred-freebuilder-1.14.9.jar:/pulsar/lib/org.glassfish.jersey.core-jersey-server-2.31.jar:/pulsar/lib/io.netty-netty-transport-native-unix-common-4.1.51.Final.jar:/pulsar/lib/org.apache.pulsar-pulsar-metadata-2.7.0.jar:/pulsar/lib/org.apache.bookkeeper-bookkeeper-tools-framework-4.12.0.jar:/pulsar/lib/io.netty-netty-codec-4.1.51.Final.jar:/pulsar/lib/jakarta.validation-jakarta.validation-api-2.0.2.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-runtime-2.7.0.jar:/pulsar/lib/io.netty-netty-codec-http-4.1.51.Final.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-secrets-2.7.0.jar:/pulsar/lib/com.github.ben-manes.caffeine-caffeine-2.6.2.jar:/pulsar/lib/org.eclipse.jetty-jetty-security-9.4.33.v20201020.jar:/pulsar/lib/org.hdrhistogram-HdrHistogram-2.1.9.jar:/pulsar/lib/io.jsonwebtoken-jjwt-jackson-0.11.1.jar:/pulsar/lib/org.bouncycastle-bcprov-jdk15on-1.66.jar:/pulsar/lib/com.google.guava-guava-30.0-jre.jar:/pulsar/lib/org.apache.pulsar-pulsar-websocket-2.7.0.jar:/pulsar/lib/org.bouncycastle-bcpkix-jdk15on-1.66.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-common-4.12.0.jar:/pulsar/lib/javax.xml.bind-jaxb-api-2.3.1.jar:/pulsar/lib/io.grpc-grpc-testing-1.18.0.jar:/pulsar/lib/io.gsonfire-gson-fire-1.8.4.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-proto-2.7.0.jar:/pulsar/lib/com.fasterxml.jackson.module-jackson-module-jsonSchema-2.11.1.jar:/pulsar/lib/org.apache.bookkeeper-bookkeeper-common-allocator-4.12.0.jar:/pulsar/lib/io.swagger-swagger-core-1.5.21.jar:/pulsar/lib/org.eclipse.jetty.websocket-websocket-common-9.4.33.v20201020.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-api-2.7.0.jar:/pulsar/lib/com.google.code.gson-gson-2.8.6.jar:/pulsar/lib/org.apache.logging.log4j-log4j-core-2.10.0.jar:/pulsar/lib/org.eclipse.jetty-jetty-proxy-9.4.33.v20201020.jar:/pulsar/lib/io.jsonwebtoken-jjwt-api-0.11.1.jar:/pulsar/lib/org.eclipse.jetty.websocket-websocket-server-9.4.33.v20201020.jar:/pulsar/lib/com.yahoo.datasketches-memory-0.8.3.jar:/pulsar/lib/org.apache.commons-commons-lang3-3.6.jar:/pulsar/lib/org.eclipse.jetty.websocket-websocket-servlet-9.4.33.v20201020.jar:/pulsar/lib/io.sundr-sundr-codegen-0.21.0.jar:/pulsar/lib/io.prometheus-simpleclient_caffeine-0.5.0.jar:/pulsar/lib/io.netty-netty-common-4.1.51.Final.jar:/pulsar/lib/io.netty-netty-resolver-4.1.51.Final.jar:/pulsar/lib/com.fasterxml.jackson.core-jackson-annotations-2.11.1.jar:/pulsar/lib/io.netty-netty-handler-proxy-4.1.51.Final.jar:/pulsar/lib/com.google.code.findbugs-jsr305-3.0.2.jar:/pulsar/lib/net.jcip-jcip-annotations-1.0.jar:/pulsar/lib/org.javassist-javassist-3.25.0-GA.jar:/pulsar/lib/com.squareup.okio-okio-1.13.0.jar:/pulsar/lib/io.grpc-grpc-okhttp-1.18.0.jar:/pulsar/lib/org.apache.commons-commons-compress-1.19.jar:/pulsar/lib/javax.websocket-javax.websocket-client-api-1.0.jar:/pulsar/lib/io.grpc-grpc-protobuf-1.18.0.jar:/pulsar/lib/org.glassfish.jersey.core-jersey-client-2.31.jar:/pulsar/lib/io.sundr-builder-annotations-0.21.0.jar:/pulsar/lib/org.apache.curator-curator-recipes-4.0.1.jar:/pulsar/lib/org.asynchttpclient-async-http-client-2.12.1.jar:/pulsar/lib/org.jctools-jctools-core-2.1.2.jar:/pulsar/lib/org.apache.bookkeeper-statelib-4.12.0.jar:/pulsar/lib/net.jodah-typetools-0.5.0.jar:/pulsar/lib/joda-time-joda-time-2.10.1.jar:/pulsar/lib/org.apache.bookkeeper.stats-prometheus-metrics-provider-4.12.0.jar:/pulsar/lib/io.dropwizard.metrics-metrics-jvm-3.1.0.jar:/pulsar/lib/javax.servlet-javax.servlet-api-3.1.0.jar:/pulsar/lib/org.glassfish.hk2.external-jakarta.inject-2.6.1.jar:/pulsar/lib/io.netty-netty-codec-socks-4.1.51.Final.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-admin-original-2.7.0.jar:/pulsar/lib/org.apache.zookeeper-zookeeper-jute-3.5.7.jar:/pulsar/lib/org.apache.pulsar-pulsar-transaction-common-2.7.0.jar:/pulsar/lib/com.carrotsearch-hppc-0.7.3.jar:/pulsar/lib/org.apache.pulsar-pulsar-common-2.7.0.jar:/pulsar/lib/jakarta.ws.rs-jakarta.ws.rs-api-2.1.6.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-java-client-base-4.12.0.jar:/pulsar/lib/com.beust-jcommander-1.78.jar:/pulsar/lib/com.google.protobuf.nano-protobuf-javanano-3.0.0-alpha-5.jar:/pulsar/lib/org.apache.commons-commons-collections4-4.1.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-service-impl-4.12.0.jar:/pulsar/lib/io.grpc-grpc-stub-1.18.0.jar:/pulsar/lib/io.netty-netty-tcnative-boringssl-static-2.0.33.Final.jar:/pulsar/lib/org.apache.distributedlog-distributedlog-common-4.12.0.jar:/pulsar/lib/org.checkerframework-checker-qual-3.5.0.jar:/pulsar/lib/io.netty-netty-transport-4.1.51.Final.jar:/pulsar/lib/io.dropwizard.metrics-metrics-graphite-3.1.0.jar:/pulsar/lib/org.apache.bookkeeper.stats-codahale-metrics-provider-4.12.0.jar:/pulsar/lib/com.github.zafarkhaja-java-semver-0.9.0.jar:/pulsar/lib/javax.ws.rs-javax.ws.rs-api-2.1.jar:/pulsar/lib/io.swagger-swagger-models-1.5.21.jar:/pulsar/lib/com.google.errorprone-error_prone_annotations-2.3.4.jar:/pulsar/lib/log4j-log4j-1.2.17.jar:/pulsar/lib/com.google.guava-failureaccess-1.0.1.jar:/pulsar/lib/org.apache.distributedlog-distributedlog-protocol-4.12.0.jar:/pulsar/lib/io.prometheus.jmx-collector-0.14.0.jar:/pulsar/lib/io.vertx-vertx-core-3.5.3.jar:/pulsar/lib/io.grpc-grpc-auth-1.18.0.jar:/pulsar/lib/com.google.auth-google-auth-library-credentials-0.9.0.jar:/pulsar/lib/org.eclipse.jetty-jetty-servlet-9.4.33.v20201020.jar:/pulsar/lib/io.jsonwebtoken-jjwt-impl-0.11.1.jar:/pulsar/lib/org.eclipse.jetty-jetty-io-9.4.33.v20201020.jar:/pulsar/lib/io.grpc-grpc-netty-1.18.0.jar:/pulsar/lib/io.netty-netty-codec-http2-4.1.51.Final.jar:/pulsar/lib/org.glassfish.jersey.media-jersey-media-multipart-2.31.jar:/pulsar/lib/org.apache.bookkeeper-bookkeeper-proto-4.12.0.jar:/pulsar/lib/io.airlift-aircompressor-0.16.jar:/pulsar/lib/org.apache.pulsar-pulsar-io-core-2.7.0.jar:/pulsar/lib/io.prometheus-simpleclient_hotspot-0.5.0.jar:/pulsar/lib/org.bitbucket.b_c-jose4j-0.7.2.jar:/pulsar/lib/com.fasterxml.jackson.dataformat-jackson-dataformat-yaml-2.11.1.jar:/pulsar/lib/io.opencensus-opencensus-contrib-grpc-metrics-0.18.0.jar:/pulsar/lib/org.apache.pulsar-managed-ledger-2.7.0.jar:/pulsar/lib/org.aspectj-aspectjweaver-1.9.2.jar:/pulsar/lib/com.fasterxml.jackson.jaxrs-jackson-jaxrs-base-2.11.1.jar:/pulsar/lib/io.grpc-grpc-protobuf-nano-1.18.0.jar:/pulsar/lib/org.eclipse.jetty.websocket-websocket-client-9.4.33.v20201020.jar:/pulsar/lib/io.netty-netty-transport-native-epoll-4.1.51.Final.jar:/pulsar/lib/com.google.api.grpc-proto-google-common-protos-1.12.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-instance-2.7.0.jar:/pulsar/lib/io.kubernetes-client-java-9.0.2.jar:/pulsar/lib/io.prometheus-simpleclient_servlet-0.5.0.jar:/pulsar/lib/io.swagger-swagger-annotations-1.5.21.jar:/pulsar/lib/org.apache.pulsar-pulsar-zookeeper-utils-2.7.0.jar:/pulsar/lib/org.eclipse.jetty-jetty-util-9.4.33.v20201020.jar:/pulsar/lib/jakarta.xml.bind-jakarta.xml.bind-api-2.3.2.jar:/pulsar/lib/com.squareup.okhttp3-logging-interceptor-3.14.3.jar:/pulsar/lib/org.apache.pulsar-pulsar-testclient-2.7.0.jar:/pulsar/lib/org.apache.logging.log4j-log4j-slf4j-impl-2.10.0.jar:/pulsar/lib/org.apache.bookkeeper-stream-storage-service-api-4.12.0.jar:/pulsar/lib/io.kubernetes-client-java-proto-9.0.2.jar:/pulsar/lib/org.eclipse.jetty-jetty-client-9.4.33.v20201020.jar:/pulsar/lib/org.apache.pulsar-pulsar-functions-local-runner-original-2.7.0.jar:/pulsar/lib/org.aspectj-aspectjrt-1.9.2.jar:/pulsar/lib/com.fasterxml.jackson.module-jackson-module-jaxb-annotations-2.11.1.jar:/pulsar/lib/org.slf4j-jul-to-slf4j-1.7.25.jar:/pulsar/lib/javax.annotation-javax.annotation-api-1.2.jar:/pulsar/lib/io.netty-netty-transport-native-unix-common-4.1.51.Final-linux-x86_64.jar:/pulsar/lib/org.apache.curator-curator-client-4.0.1.jar:/pulsar/lib/io.netty-netty-resolver-dns-4.1.51.Final.jar:/pulsar/lib/org.slf4j-jcl-over-slf4j-1.7.25.jar:/pulsar/lib/jakarta.activation-jakarta.activation-api-1.2.1.jar:/pulsar/lib/com.google.protobuf-protobuf-java-3.11.4.jar:/pulsar/lib/io.grpc-grpc-protobuf-lite-1.18.0.jar:/pulsar/lib/io.opencensus-opencensus-api-0.18.0.jar:/pulsar/lib/org.apache.distributedlog-distributedlog-core-4.12.0.jar:/pulsar/lib/org.eclipse.jetty-jetty-server-9.4.33.v20201020.jar:/pulsar/lib/commons-io-commons-io-2.5.jar:/pulsar/lib/commons-collections-commons-collections-3.2.2.jar:/pulsar/lib/io.grpc-grpc-core-1.18.0.jar:/pulsar/lib/org.apache.pulsar-pulsar-client-messagecrypto-bc-2.7.0.jar:/pulsar/lib/org.apache.bookkeeper.stats-bookkeeper-stats-api-4.12.0.jar:/pulsar/lib/org.yaml-snakeyaml-1.26.jar:/pulsar/lib/org.apache.pulsar-pulsar-broker-auth-sasl-2.7.0.jar:/pulsar/lib/org.apache.bookkeeper.http-vertx-http-server-4.12.0.jar:/pulsar/lib/org.apache.bookkeeper-cpu-affinity-4.12.0.jar:/pulsar/lib/org.glassfish.hk2-hk2-utils-2.6.1.jar:/pulsar/lib/com.squareup.okhttp3-okhttp-3.14.3.jar:/pulsar/lib/com.fasterxml.jackson.jaxrs-jackson-jaxrs-json-provider-2.11.1.jar:/pulsar/lib/com.fasterxml.jackson.core-jackson-core-2.11.1.jar:/pulsar/lib/com.sun.activation-javax.activation-1.2.0.jar:/pulsar/lib/org.glassfish.jersey.media-jersey-media-json-jackson-2.31.jar:/pulsar/lib/org.glassfish.jersey.ext-jersey-entity-filtering-2.31.jar:
+23:21:52.279 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+23:21:52.279 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+23:21:52.279 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.version=5.10.39-zjiabuild
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.name=root
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.home=/root
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/pulsar
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=257MB
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=3454MB
+23:21:52.280 [main] INFO  org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=295MB
+23:21:52.283 [main] INFO  org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=zookeeper:2181 sessionTimeout=10000 watcher=org.apache.bookkeeper.zookeeper.ZooKeeperWatcherBase@3a12c404
+23:21:52.286 [main] INFO  org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+23:21:52.289 [main] INFO  org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 10485760 Bytes
+23:21:52.294 [main] INFO  org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=
+23:21:52.326 [main-SendThread(zookeeper:2181)] INFO  org.apache.zookeeper.ClientCnxn - Opening socket connection to server zookeeper/10.0.2.39:2181. Will not attempt to authenticate using SASL (unknown error)
+23:21:52.330 [main-SendThread(zookeeper:2181)] INFO  org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /10.0.2.118:50688, server: zookeeper/10.0.2.39:2181
+23:21:52.334 [main-SendThread(zookeeper:2181)] INFO  org.apache.zookeeper.ClientCnxn - Session establishment complete on server zookeeper/10.0.2.39:2181, sessionid = 0x100000a23350039, negotiated timeout = 10000
+23:21:52.335 [main-EventThread] INFO  org.apache.bookkeeper.zookeeper.ZooKeeperWatcherBase - ZooKeeper client is connected now.
+23:21:52.362 [main] INFO  org.apache.bookkeeper.bookie.Bookie - Stamping new cookies on all dirs [data/bookkeeper/journal/current] [data/bookkeeper/ledgers/current]
+23:21:52.444 [main] INFO  org.apache.bookkeeper.bookie.Bookie - instantiate ledger manager org.apache.bookkeeper.meta.HierarchicalLedgerManagerFactory
+23:21:52.462 [main] ERROR org.apache.bookkeeper.bookie.Journal - Problems reading from data/bookkeeper/ledgers/current/lastMark (this is okay if it is the first time starting this bookie
+23:21:52.462 [main] INFO  org.apache.bookkeeper.bookie.Bookie - Using ledger storage: org.apache.bookkeeper.bookie.SortedLedgerStorage
+23:21:52.482 [main] INFO  org.apache.bookkeeper.bookie.IndexPersistenceMgr - openFileLimit = 20000
+23:21:52.500 [main] INFO  org.apache.bookkeeper.bookie.IndexInMemPageMgr - maxDirectMemory = 3622305792, pageSize = 8192, pageLimit = 147392
+23:21:52.505 [main] INFO  org.apache.bookkeeper.bookie.ScanAndCompareGarbageCollector - Over Replicated Ledger Deletion : enabled=true, interval=86400000
+23:21:52.510 [main] INFO  org.apache.bookkeeper.bookie.GarbageCollectorThread - Minor Compaction : enabled=true, threshold=0.20000000298023224, interval=3600000
+23:21:52.510 [main] INFO  org.apache.bookkeeper.bookie.GarbageCollectorThread - Major Compaction : enabled=true, threshold=0.800000011920929, interval=86400000
+23:21:52.533 [main] INFO  org.apache.bookkeeper.server.Main - Load lifecycle component : org.apache.bookkeeper.server.service.BookieService
+23:21:52.540 [main] INFO  org.apache.bookkeeper.common.component.ComponentStarter - Starting component bookie-server.
+23:21:52.546 [main] INFO  org.apache.bookkeeper.bookie.Bookie - Finished replaying journal in 1 ms.
+23:21:52.547 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.SyncThread - Flush ledger storage at checkpoint CheckpointList{checkpoints=[LogMark: logFileId - 0 , logFileOffset - 0]}.
+23:21:52.548 [main] INFO  org.apache.bookkeeper.bookie.Bookie - Finished reading journal, starting bookie
+23:21:52.549 [BookieJournal-3181] INFO  org.apache.bookkeeper.bookie.Journal - Starting journal on data/bookkeeper/journal/current
+23:21:52.550 [ForceWriteThread] INFO  org.apache.bookkeeper.bookie.Journal - ForceWrite Thread started
+23:21:52.552 [BookieJournal-3181] INFO  org.apache.bookkeeper.bookie.JournalChannel - Opening journal data/bookkeeper/journal/current/17b4c1f1ca7.txn
+23:21:52.818 [main] INFO  org.apache.bookkeeper.common.component.ComponentStarter - Started component bookie-server.
+23:22:56.635 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.635 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.640 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.640 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.636 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x93b08d64, L:/10.0.2.118:3181 - R:/10.0.2.76:60460]
+23:22:56.640 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x7d8940ac, L:/10.0.2.118:3181 - R:/10.0.2.76:60444]
+23:22:56.637 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9a53f033, L:/10.0.2.118:3181 - R:/10.0.2.76:60426]
+23:22:56.637 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x05a2159e, L:/10.0.2.118:3181 - R:/10.0.2.76:60442]
+23:22:56.637 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x0fe78029, L:/10.0.2.118:3181 - R:/10.0.2.76:60424]
+23:22:56.637 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x76234e62, L:/10.0.2.118:3181 - R:/10.0.2.76:60428]
+23:22:56.637 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x79b1cbe6, L:/10.0.2.118:3181 - R:/10.0.2.76:60446]
+23:22:56.637 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xe30ff350, L:/10.0.2.118:3181 - R:/10.0.2.76:60464]
+23:22:56.637 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x904ee557, L:/10.0.2.118:3181 - R:/10.0.2.76:60434]
+23:22:56.636 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x772e6f9c, L:/10.0.2.118:3181 - R:/10.0.2.76:60482]
+23:22:56.636 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xc5e9f64e, L:/10.0.2.118:3181 - R:/10.0.2.76:60438]
+23:22:56.636 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xf7fd27d4, L:/10.0.2.118:3181 - R:/10.0.2.76:60432]
+23:22:56.636 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x8d7f7f6e, L:/10.0.2.118:3181 - R:/10.0.2.76:60440]
+23:22:56.637 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x47674c3d, L:/10.0.2.118:3181 - R:/10.0.2.76:60474]
+23:22:56.640 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x6b6690d5, L:/10.0.2.118:3181 - R:/10.0.2.76:60430]
+23:22:56.636 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x4d0b77f8, L:/10.0.2.118:3181 - R:/10.0.2.76:60436]
+23:22:56.644 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.644 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x58ecc4f6, L:/10.0.2.118:3181 - R:/10.0.2.75:50258]
+23:22:56.652 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.652 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xad437eec, L:/10.0.2.118:3181 - R:/10.0.2.75:50286]
+23:22:56.657 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.657 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x85d16c9c, L:/10.0.2.118:3181 - R:/10.0.2.75:50294]
+23:22:56.662 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.663 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.663 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x386c8553, L:/10.0.2.118:3181 - R:/10.0.2.75:50310]
+23:22:56.663 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9b175ed8, L:/10.0.2.118:3181 - R:/10.0.2.75:50308]
+23:22:56.669 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.669 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x69f8fb35, L:/10.0.2.118:3181 - R:/10.0.2.75:50312]
+23:22:56.670 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.670 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xc9d4d803, L:/10.0.2.118:3181 - R:/10.0.2.75:50322]
+23:22:56.671 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.671 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x8485fc87, L:/10.0.2.118:3181 - R:/10.0.2.75:50326]
+23:22:56.677 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.677 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x43093696, L:/10.0.2.118:3181 - R:/10.0.2.75:50332]
+23:22:56.678 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.678 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.678 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x841b4dda, L:/10.0.2.118:3181 - R:/10.0.2.75:50340]
+23:22:56.678 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x5fc83d6f, L:/10.0.2.118:3181 - R:/10.0.2.75:50338]
+23:22:56.679 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.679 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x188b1e57, L:/10.0.2.118:3181 - R:/10.0.2.75:50342]
+23:22:56.682 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.682 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.682 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.682 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x878809c1, L:/10.0.2.118:3181 - R:/10.0.2.75:50344]
+23:22:56.682 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x1f89d3d5, L:/10.0.2.118:3181 - R:/10.0.2.75:50348]
+23:22:56.682 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xb7284b8d, L:/10.0.2.118:3181 - R:/10.0.2.75:50346]
+23:22:56.683 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.683 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x3fa63772, L:/10.0.2.118:3181 - R:/10.0.2.75:50352]
+23:22:56.692 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.692 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xdbc4f54b, L:/10.0.2.118:3181 - R:/10.0.2.77:33028]
+23:22:56.707 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.708 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x30db41c1, L:/10.0.2.118:3181 - R:/10.0.2.74:55210]
+23:22:56.708 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.709 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.709 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xcf6f13c4, L:/10.0.2.118:3181 - R:/10.0.2.74:55216]
+23:22:56.709 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xa132aaad, L:/10.0.2.118:3181 - R:/10.0.2.74:55220]
+23:22:56.711 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.711 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.711 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.711 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xf2ac88b3, L:/10.0.2.118:3181 - R:/10.0.2.77:33072]
+23:22:56.711 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xbff9912c, L:/10.0.2.118:3181 - R:/10.0.2.77:33070]
+23:22:56.712 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.711 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x31453337, L:/10.0.2.118:3181 - R:/10.0.2.77:33068]
+23:22:56.712 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.713 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xf772dafb, L:/10.0.2.118:3181 - R:/10.0.2.77:33074]
+23:22:56.713 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xfcb4912b, L:/10.0.2.118:3181 - R:/10.0.2.77:33078]
+23:22:56.712 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.712 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.713 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x0066c2ad, L:/10.0.2.118:3181 - R:/10.0.2.74:55212]
+23:22:56.713 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x81b6e6aa, L:/10.0.2.118:3181 - R:/10.0.2.74:55218]
+23:22:56.714 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xf3314e42, L:/10.0.2.118:3181 - R:/10.0.2.77:33076]
+23:22:56.714 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xad8c8734, L:/10.0.2.118:3181 - R:/10.0.2.77:33080]
+23:22:56.714 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x202e512a, L:/10.0.2.118:3181 - R:/10.0.2.77:33084]
+23:22:56.714 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xe743878a, L:/10.0.2.118:3181 - R:/10.0.2.77:33092]
+23:22:56.714 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xd8ec3e89, L:/10.0.2.118:3181 - R:/10.0.2.77:33088]
+23:22:56.714 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x4f15562e, L:/10.0.2.118:3181 - R:/10.0.2.77:33094]
+23:22:56.714 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x452257f7, L:/10.0.2.118:3181 - R:/10.0.2.77:33102]
+23:22:56.714 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xee970123, L:/10.0.2.118:3181 - R:/10.0.2.77:33104]
+23:22:56.714 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.714 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xecc4832c, L:/10.0.2.118:3181 - R:/10.0.2.77:33106]
+23:22:56.715 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xaf5b855a, L:/10.0.2.118:3181 - R:/10.0.2.77:33110]
+23:22:56.715 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.715 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x18d7dd4b, L:/10.0.2.118:3181 - R:/10.0.2.74:55224]
+23:22:56.726 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.726 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x34532836, L:/10.0.2.118:3181 - R:/10.0.2.73:48796]
+23:22:56.726 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.726 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xe20e088a, L:/10.0.2.118:3181 - R:/10.0.2.73:48798]
+23:22:56.726 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.726 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x82cc7c68, L:/10.0.2.118:3181 - R:/10.0.2.73:48802]
+23:22:56.727 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.727 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xdcd6e2bf, L:/10.0.2.118:3181 - R:/10.0.2.74:55228]
+23:22:56.727 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.727 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9afa867c, L:/10.0.2.118:3181 - R:/10.0.2.73:48818]
+23:22:56.727 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.727 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x02d99518, L:/10.0.2.118:3181 - R:/10.0.2.73:48820]
+23:22:56.742 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.742 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x702f9f2b, L:/10.0.2.118:3181 - R:/10.0.2.74:55236]
+23:22:56.743 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.743 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.743 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x25256602, L:/10.0.2.118:3181 - R:/10.0.2.73:48828]
+23:22:56.743 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x302cb8f5, L:/10.0.2.118:3181 - R:/10.0.2.73:48826]
+23:22:56.744 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.744 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x1d39fa9b, L:/10.0.2.118:3181 - R:/10.0.2.74:55242]
+23:22:56.744 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.744 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.744 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x685bc170, L:/10.0.2.118:3181 - R:/10.0.2.73:48838]
+23:22:56.744 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xcf49adcb, L:/10.0.2.118:3181 - R:/10.0.2.73:48836]
+23:22:56.745 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.745 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.745 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xea64df9c, L:/10.0.2.118:3181 - R:/10.0.2.73:48848]
+23:22:56.745 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.745 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.745 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xaf0627e9, L:/10.0.2.118:3181 - R:/10.0.2.73:48846]
+23:22:56.745 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9a8190ea, L:/10.0.2.118:3181 - R:/10.0.2.73:48850]
+23:22:56.745 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xd99f4910, L:/10.0.2.118:3181 - R:/10.0.2.73:48852]
+23:22:56.746 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.746 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x0be1f2f5, L:/10.0.2.118:3181 - R:/10.0.2.74:55246]
+23:22:56.747 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.747 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9145e7be, L:/10.0.2.118:3181 - R:/10.0.2.74:55250]
+23:22:56.748 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.748 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x364d2ea2, L:/10.0.2.118:3181 - R:/10.0.2.73:48866]
+23:22:56.749 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.749 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xbe48417b, L:/10.0.2.118:3181 - R:/10.0.2.74:55254]
+23:22:56.750 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.750 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x67b3dc29, L:/10.0.2.118:3181 - R:/10.0.2.73:48872]
+23:22:56.751 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.752 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x964aa4f6, L:/10.0.2.118:3181 - R:/10.0.2.73:48880]
+23:22:56.752 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.752 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xad845367, L:/10.0.2.118:3181 - R:/10.0.2.74:55262]
+23:22:56.753 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.753 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xc11cb0e5, L:/10.0.2.118:3181 - R:/10.0.2.74:55266]
+23:22:56.757 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.757 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x816f56a7, L:/10.0.2.118:3181 - R:/10.0.2.74:55272]
+23:22:56.761 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.761 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x90df757a, L:/10.0.2.118:3181 - R:/10.0.2.74:55284]
+23:22:56.778 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.778 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x1b441cb2, L:/10.0.2.118:3181 - R:/10.0.2.72:46726]
+23:22:56.779 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.779 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.779 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xe2a6b9c5, L:/10.0.2.118:3181 - R:/10.0.2.72:46728]
+23:22:56.779 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xb4e7ceab, L:/10.0.2.118:3181 - R:/10.0.2.72:46730]
+23:22:56.779 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.779 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x73d3038a, L:/10.0.2.118:3181 - R:/10.0.2.72:46740]
+23:22:56.779 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.780 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xf1f590a8, L:/10.0.2.118:3181 - R:/10.0.2.71:54952]
+23:22:56.780 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.780 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x8c40aa69, L:/10.0.2.118:3181 - R:/10.0.2.72:46744]
+23:22:56.782 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.782 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.782 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x14cd674a, L:/10.0.2.118:3181 - R:/10.0.2.71:54960]
+23:22:56.782 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x7a3eb8bb, L:/10.0.2.118:3181 - R:/10.0.2.71:54962]
+23:22:56.782 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.782 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.783 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xad4970a3, L:/10.0.2.118:3181 - R:/10.0.2.71:54974]
+23:22:56.783 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xafa8bb84, L:/10.0.2.118:3181 - R:/10.0.2.71:54972]
+23:22:56.783 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.783 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xd914cc79, L:/10.0.2.118:3181 - R:/10.0.2.71:54978]
+23:22:56.786 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.786 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x40905835, L:/10.0.2.118:3181 - R:/10.0.2.71:54982]
+23:22:56.786 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.786 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.786 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x82108086, L:/10.0.2.118:3181 - R:/10.0.2.71:54986]
+23:22:56.786 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x42db19ab, L:/10.0.2.118:3181 - R:/10.0.2.71:54990]
+23:22:56.787 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.787 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x7567edb6, L:/10.0.2.118:3181 - R:/10.0.2.71:54994]
+23:22:56.787 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.787 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xef88f485, L:/10.0.2.118:3181 - R:/10.0.2.71:54998]
+23:22:56.789 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.789 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x48dab53d, L:/10.0.2.118:3181 - R:/10.0.2.71:55002]
+23:22:56.792 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.792 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x15957869, L:/10.0.2.118:3181 - R:/10.0.2.72:46750]
+23:22:56.795 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.795 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xbee8a148, L:/10.0.2.118:3181 - R:/10.0.2.70:42800]
+23:22:56.798 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xc1f69a7c, L:/10.0.2.118:3181 - R:/10.0.2.70:42814]
+23:22:56.798 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xce4e66c5, L:/10.0.2.118:3181 - R:/10.0.2.70:42816]
+23:22:56.798 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x7696a641, L:/10.0.2.118:3181 - R:/10.0.2.72:46762]
+23:22:56.798 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x46f81d5c, L:/10.0.2.118:3181 - R:/10.0.2.70:42820]
+23:22:56.798 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x45dfe2cf, L:/10.0.2.118:3181 - R:/10.0.2.70:42824]
+23:22:56.798 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x0807dfbe, L:/10.0.2.118:3181 - R:/10.0.2.70:42822]
+23:22:56.798 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.798 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x88ce33de, L:/10.0.2.118:3181 - R:/10.0.2.71:55006]
+23:22:56.798 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x4423efb4, L:/10.0.2.118:3181 - R:/10.0.2.70:42826]
+23:22:56.799 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x1f5460db, L:/10.0.2.118:3181 - R:/10.0.2.72:46778]
+23:22:56.800 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x420f8267, L:/10.0.2.118:3181 - R:/10.0.2.72:46780]
+23:22:56.800 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x8ae8fc0a, L:/10.0.2.118:3181 - R:/10.0.2.72:46788]
+23:22:56.800 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x31898e21, L:/10.0.2.118:3181 - R:/10.0.2.72:46798]
+23:22:56.800 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x7907bd74, L:/10.0.2.118:3181 - R:/10.0.2.72:46796]
+23:22:56.800 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.800 [bookie-io-1-3] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xa7b7c0ce, L:/10.0.2.118:3181 - R:/10.0.2.72:46808]
+23:22:56.801 [bookie-io-1-2] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xa7503f38, L:/10.0.2.118:3181 - R:/10.0.2.72:46806]
+23:22:56.801 [bookie-io-1-4] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x068b1132, L:/10.0.2.118:3181 - R:/10.0.2.71:55010]
+23:22:56.801 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.801 [bookie-io-1-5] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x65555f92, L:/10.0.2.118:3181 - R:/10.0.2.71:55014]
+23:22:56.802 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.802 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.802 [bookie-io-1-6] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x9b0ccd5d, L:/10.0.2.118:3181 - R:/10.0.2.72:46810]
+23:22:56.802 [bookie-io-1-7] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x2c18f6aa, L:/10.0.2.118:3181 - R:/10.0.2.72:46812]
+23:22:56.803 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.803 [bookie-io-1-8] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x6c48394c, L:/10.0.2.118:3181 - R:/10.0.2.70:42828]
+23:22:56.804 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.804 [bookie-io-1-9] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x4170601e, L:/10.0.2.118:3181 - R:/10.0.2.70:42836]
+23:22:56.805 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.805 [bookie-io-1-10] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x6277faa7, L:/10.0.2.118:3181 - R:/10.0.2.70:42848]
+23:22:56.814 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.814 [bookie-io-1-11] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x25b2288c, L:/10.0.2.118:3181 - R:/10.0.2.70:42860]
+23:22:56.814 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.814 [bookie-io-1-12] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x3016dde1, L:/10.0.2.118:3181 - R:/10.0.2.70:42862]
+23:22:56.816 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.816 [bookie-io-1-13] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x5622d35f, L:/10.0.2.118:3181 - R:/10.0.2.70:42866]
+23:22:56.816 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.816 [bookie-io-1-14] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x93db9ba4, L:/10.0.2.118:3181 - R:/10.0.2.71:55018]
+23:22:56.816 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.816 [bookie-io-1-15] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0xc344985b, L:/10.0.2.118:3181 - R:/10.0.2.70:42872]
+23:22:56.817 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.817 [bookie-io-1-16] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x0f8b76bd, L:/10.0.2.118:3181 - R:/10.0.2.70:42876]
+23:22:56.817 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.AuthHandler - Authentication success on server side
+23:22:56.817 [bookie-io-1-1] INFO  org.apache.bookkeeper.proto.BookieRequestHandler - Channel connected  [id: 0x117ea248, L:/10.0.2.118:3181 - R:/10.0.2.70:42882]
+23:23:01.295 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 67817984]}
+23:23:01.296 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:01.297 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file because current active log channel has not initialized yet
+23:23:01.301 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/0.log for logId 0.
+23:23:01.303 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/1.log for logId 1.
+23:23:01.485 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Rolling entry logger since it reached size limitation
+23:23:01.485 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to reaching log limit after flushing memtable : logIdBeforeFlush = -57005, logIdAfterFlush = 0
+23:23:01.486 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/2.log for logId 2.
+23:23:01.486 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 0 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=0, logFile=data/bookkeeper/ledgers/current/0.log, ledgerIdAssigned=-1}].
+23:23:01.494 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 3648127
+23:23:01.495 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 1 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=0, logFile=data/bookkeeper/ledgers/current/0.log, ledgerIdAssigned=-1}, BufferedChannel{logId=1, logFile=data/bookkeeper/ledgers/current/1.log, ledgerIdAssigned=-1}].
+23:23:01.495 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/3.log for logId 3.
+23:23:01.643 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 0 to disk.
+23:23:01.646 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 1 to disk.
+23:23:01.651 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 965331
+23:23:01.652 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 2 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=2, logFile=data/bookkeeper/ledgers/current/2.log, ledgerIdAssigned=-1}].
+23:23:01.652 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/4.log for logId 4.
+23:23:01.667 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 2 to disk.
+23:23:05.278 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 140252672]}
+23:23:05.279 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:08.889 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 208016384]}
+23:23:08.889 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:12.457 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 275755520]}
+23:23:12.457 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:16.134 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 343510016]}
+23:23:16.134 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:19.803 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 411331072]}
+23:23:19.803 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:23.355 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 479062528]}
+23:23:23.356 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:26.908 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 546799104]}
+23:23:26.908 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:30.456 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 614569984]}
+23:23:30.456 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:34.017 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 682343936]}
+23:23:34.017 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:37.535 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 750137344]}
+23:23:37.535 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:45.705 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 817883136]}
+23:23:45.705 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:49.232 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 885657600]}
+23:23:49.232 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:52.766 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 953406464]}
+23:23:52.766 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:56.320 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1021142528]}
+23:23:56.321 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:23:59.856 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1088928768]}
+23:23:59.856 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:03.382 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1156633600]}
+23:24:03.383 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:03.472 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Rolling entry logger since it reached size limitation
+23:24:03.472 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to reaching log limit after flushing memtable : logIdBeforeFlush = 3, logIdAfterFlush = 3
+23:24:03.473 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 3 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=3, logFile=data/bookkeeper/ledgers/current/3.log, ledgerIdAssigned=-1}].
+23:24:03.473 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/5.log for logId 5.
+23:24:03.478 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 1760968
+23:24:03.479 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 4 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=3, logFile=data/bookkeeper/ledgers/current/3.log, ledgerIdAssigned=-1}, BufferedChannel{logId=4, logFile=data/bookkeeper/ledgers/current/4.log, ledgerIdAssigned=-1}].
+23:24:03.479 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/6.log for logId 6.
+23:24:04.501 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 3 to disk.
+23:24:04.512 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 4 to disk.
+23:24:04.518 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 2274914
+23:24:04.518 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 5 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=5, logFile=data/bookkeeper/ledgers/current/5.log, ledgerIdAssigned=-1}].
+23:24:04.518 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/7.log for logId 7.
+23:24:04.544 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 5 to disk.
+23:24:08.186 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1228475392]}
+23:24:08.186 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:11.727 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1296288256]}
+23:24:11.727 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:15.243 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1364023296]}
+23:24:15.243 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:18.769 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1431785472]}
+23:24:18.769 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:22.287 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1499540480]}
+23:24:22.287 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:25.810 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1567315456]}
+23:24:25.810 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:29.333 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1635083264]}
+23:24:29.334 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:32.853 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1702870528]}
+23:24:32.853 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:36.372 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1770652672]}
+23:24:36.372 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:44.051 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1838371840]}
+23:24:44.051 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:47.567 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1906132992]}
+23:24:47.567 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:51.093 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 1973891072]}
+23:24:51.093 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:54.615 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 2041667584]}
+23:24:54.615 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:24:58.133 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712551 , logFileOffset - 2109455872]}
+23:24:58.133 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:00.110 [BookieJournal-3181] INFO  org.apache.bookkeeper.bookie.JournalChannel - Opening journal data/bookkeeper/journal/current/17b4c1f1ca8.txn
+23:25:01.657 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 29725696]}
+23:25:01.657 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:05.177 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 97500160]}
+23:25:05.178 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:05.265 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Rolling entry logger since it reached size limitation
+23:25:05.265 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to reaching log limit after flushing memtable : logIdBeforeFlush = 6, logIdAfterFlush = 6
+23:25:05.265 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 6 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=6, logFile=data/bookkeeper/ledgers/current/6.log, ledgerIdAssigned=-1}].
+23:25:05.266 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/8.log for logId 8.
+23:25:05.269 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 1679985
+23:25:05.270 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 7 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=6, logFile=data/bookkeeper/ledgers/current/6.log, ledgerIdAssigned=-1}, BufferedChannel{logId=7, logFile=data/bookkeeper/ledgers/current/7.log, ledgerIdAssigned=-1}].
+23:25:05.270 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/9.log for logId 9.
+23:25:06.810 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 6 to disk.
+23:25:06.820 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 7 to disk.
+23:25:06.825 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Creating a new entry log file due to preparing checkpoint : numBytesFlushed = 2689920
+23:25:06.825 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerBase - Flushing entry logger 8 back to filesystem, pending for syncing entry loggers : [BufferedChannel{logId=8, logFile=data/bookkeeper/ledgers/current/8.log, ledgerIdAssigned=-1}].
+23:25:06.826 [pool-5-thread-1] INFO  org.apache.bookkeeper.bookie.EntryLoggerAllocator - Created new entry log file data/bookkeeper/ledgers/current/a.log for logId 10.
+23:25:06.855 [SyncThread-7-1] INFO  org.apache.bookkeeper.bookie.EntryLogManagerForSingleEntryLog - Synced entry logger 8 to disk.
+23:25:10.606 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 169660416]}
+23:25:10.606 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:14.124 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 237437440]}
+23:25:14.124 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:17.641 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 305225728]}
+23:25:17.642 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:21.164 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 372990464]}
+23:25:21.164 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:24.681 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 440793600]}
+23:25:24.681 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:28.207 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 508568064]}
+23:25:28.207 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:31.730 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 576316928]}
+23:25:31.730 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:35.250 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 644123136]}
+23:25:35.250 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:38.771 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 711893504]}
+23:25:38.772 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:44.496 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 779666432]}
+23:25:44.496 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:50.064 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 847384064]}
+23:25:50.064 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:53.593 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 915170816]}
+23:25:53.594 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
+23:25:57.122 [BookieWriteThreadPool-OrderedExecutor-0-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Reached size CheckpointList{checkpoints=[LogMark: logFileId - 1629069712552 , logFileOffset - 982913536]}
+23:25:57.122 [SortedLedgerStorage-0] INFO  org.apache.bookkeeper.bookie.SortedLedgerStorage - Started flushing mem table.
