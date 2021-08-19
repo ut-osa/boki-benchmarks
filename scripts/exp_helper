@@ -11,7 +11,7 @@ import argparse
 import subprocess as sp
 
 AWS_REGION = 'us-east-2'
-AMI_ID = 'ami-0b9d4e41645d1ba8b'
+AMI_ID = 'ami-0c6de836734de3280'
 SECURITY_GROUP_NAME = 'boki'
 PLACEMENT_GROUP = 'boki-experiments'
 AVAILABILITY_ZONE = 'us-east-2a'
@@ -238,7 +238,18 @@ def generate_docker_compose_main(base_dir):
                 'constraints': ['node.labels.%s == true' % (service_config['placement_label'],)],
                 'max_replicas_per_node': 1
             }
+        service_docker_compose['environment'] = []
         service_docker_compose['volumes'] = []
+        if 'need_aws_env' in service_config and service_config['need_aws_env']:
+            if 'aws_access_key_id' in config:
+                service_docker_compose['environment'].append(
+                    'AWS_ACCESS_KEY_ID=%s' % (config['aws_access_key_id'],))
+            if 'aws_secret_access_key' in config:
+                service_docker_compose['environment'].append(
+                    'AWS_SECRET_ACCESS_KEY=%s' % (config['aws_secret_access_key'],))
+            if 'aws_region' in config:
+                service_docker_compose['environment'].append(
+                    'AWS_REGION=%s' % (config['aws_region'],))
         if 'mount_certs' in service_config and service_config['mount_certs']:
             service_docker_compose['volumes'].append(
                 '/etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt')
