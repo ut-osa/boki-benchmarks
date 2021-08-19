@@ -75,9 +75,9 @@ of options. This script can be used to quickly test all setups, and learn the ex
 ### Evaluation and expected result ###
 
 Within individual result directory, a `results.log` or `latency.txt` file describes the metrics
-of this run.
+of this run. `scripts/summarize_results.py` is a simple script to print a result summary for full inspection.
 
-We provide `exepcted_results` directory, including some examples of experiment results.
+Within the directory of each workload experiment, we provide `exepcted_results` directory, including some examples of experiment results.
 
 ### License ###
 
