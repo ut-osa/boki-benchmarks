@@ -16,10 +16,10 @@ It includes all materials for the artifact evaluation of our SOSP '21 paper.
 
 Our evaluation workloads run on AWS EC2 instances in `us-east-2` region.
 
-EC2 VMs for running experiments use a public AMI (`ami-06e206d7334bff2ec`) built by us,
+EC2 VMs for running experiments use a public AMI (`ami-0c6de836734de3280`) built by us,
 which is based on Ubuntu 20.04 with necessary dependencies installed.
 
-### Installation ###
+### Environment setup ###
 
 #### Setting up the controller machine ####
 
@@ -59,25 +59,25 @@ as long as you do not modify source code of Boki (in `boki` directory) and evalu
 
 Each sub-directory within `experiments` corresponds to one experiment.
 Within each experiment directory, a `config.json` file describes machine configuration and placement assignment of
-individual Docker containers (i.e. microservices) for this experiment.
+individual Docker containers for this experiment.
 
-The entry point of each experiment is the `run_all.sh` script.
-It first provisions VMs for experiments.
-Then it executes evaluation workloads with different QPS targets via `run_once.sh` script.
-`run_once.sh` script performs workload-specific setups, runs `wrk2` to measure latency distribution under the target QPS,
-and stores results in `results` directory.
-When everything is done, `run_all.sh` script terminates all provisioned experiment VMs.
-(TO CHECK AND REVISE)
+`run_once.sh` script is the entry point of one experiment run, which performs workload-specific setups,
+runs the benchmark with configured options, and stores results in  `results` directory.
 
-VM provisioning is done by `scripts/exp_helper` with sub-command `start-machines`.
-By default, it creates on-demand EC2 instances. But it also supports the option to
-use Spot instances for cost saving.
+Before executing `run_once.sh` script, VM provisioning is done by `scripts/exp_helper`
+with sub-command `start-machines`.
 After EC2 instances are up, the script then sets up Docker engines on newly created
 VMs to form a Docker cluster in [swarm](https://docs.docker.com/engine/swarm/) mode.
 
+`experiments/run_quick.sh` is a push-button script for running all experiments with a small set
+of options. This script can be used to quickly test all setups, and learn the experiment workflow.
+
 ### Evaluation and expected result ###
 
-TODO
+Within individual result directory, a `results.log` or `latency.txt` file describes the metrics
+of this run.
+
+We provide `exepcted_results` directory, including some examples of experiment results.
 
 ### License ###
 
