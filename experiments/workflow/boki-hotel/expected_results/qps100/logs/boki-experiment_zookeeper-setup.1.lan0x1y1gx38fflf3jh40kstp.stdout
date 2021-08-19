@@ -1,0 +1,31 @@
+Connecting to zookeeper:2181
+Welcome to ZooKeeper!
+JLine support is enabled
+2021-08-18 23:29:25,373 [myid:zookeeper:2181] - WARN  [main-SendThread(zookeeper:2181):ClientCnxn$SendThread@1285] - Session 0x0 for sever zookeeper/10.0.1.2:2181, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+[zk: zookeeper:2181(CONNECTING) 0] deleteall /faas
+[zk: zookeeper:2181(CONNECTING) 1] create /faas
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null
+[zk: zookeeper:2181(CONNECTED) 2] create /faas/node
+[zk: zookeeper:2181(CONNECTED) 3] create /faas/view
+[zk: zookeeper:2181(CONNECTED) 4] create /faas/freeze
+[zk: zookeeper:2181(CONNECTED) 5] create /faas/cmd
+[zk: zookeeper:2181(CONNECTED) 6] quit
+
+WATCHER::
+
+WatchedEvent state:Closed type:None path:null
+2021-08-18 23:29:26,620 [myid:] - ERROR [main:ServiceUtils@42] - Exiting JVM with code 0
+Connecting to zookeeper:2181
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null
+2021-08-18 23:30:16,891 [myid:] - ERROR [main:ServiceUtils@42] - Exiting JVM with code 0

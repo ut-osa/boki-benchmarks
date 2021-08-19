@@ -1,0 +1,152 @@
+I0819 00:15:44.869939 Main     thread.cpp:126] Register main thread: tid=7554
+I0819 00:15:44.871652 Main     server_base.cpp:145] ServerBase: Start 2 IO workers
+I0819 00:15:44.871649 ZK/EL    thread.cpp:62] Start thread: ZK/EL (tid=7610)
+I0819 00:15:44.894244 Main     io_uring.cpp:70] io_uring[0]: register 4096 fd slots
+I0819 00:15:44.894448 Main     io_uring.cpp:123] io_uring[0]: register fd 10, 1 registered fds in total
+I0819 00:15:44.894457 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 1
+I0819 00:15:44.894469 Main     io_uring.cpp:123] io_uring[0]: register fd 9, 2 registered fds in total
+I0819 00:15:44.894472 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 2
+I0819 00:15:44.894544 IO-0/EL  thread.cpp:62] Start thread: IO-0/EL (tid=7623)
+I0819 00:15:44.894634 IO-0/EL  io_worker.cpp:167] IO-0: Event loop starts
+I0819 00:15:44.914234 Main     io_uring.cpp:70] io_uring[1]: register 4096 fd slots
+I0819 00:15:44.914439 Main     io_uring.cpp:123] io_uring[1]: register fd 14, 1 registered fds in total
+I0819 00:15:44.914451 Main     buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 1
+I0819 00:15:44.914460 Main     io_uring.cpp:123] io_uring[1]: register fd 13, 2 registered fds in total
+I0819 00:15:44.914463 Main     buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 2
+I0819 00:15:44.914594 Main     server_base.cpp:171] ServerBase: Listen on 10.0.3.116:24084 for message connections
+I0819 00:15:44.914594 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 15, 3 registered fds in total
+I0819 00:15:44.914533 IO-1/EL  thread.cpp:62] Start thread: IO-1/EL (tid=7634)
+I0819 00:15:44.914646 IO-1/EL  io_worker.cpp:167] IO-1: Event loop starts
+I0819 00:15:44.914635 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 3
+I0819 00:15:44.914691 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 1048579, total of type 1048579 is 1
+I0819 00:15:44.914755 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 18, 3 registered fds in total
+I0819 00:15:44.914774 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 3
+I0819 00:15:44.914784 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 1048579, total of type 1048579 is 1
+I0819 00:15:44.919538 Srv/EL   thread.cpp:62] Start thread: Srv/EL (tid=7637)
+I0819 00:15:44.919643 Srv/EL   server_base.cpp:103] ServerBase: Event loop starts
+I0819 00:15:44.921462 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_2 with address 10.0.3.116:24084
+I0819 00:15:44.953453 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_3 with address 10.0.3.115:26139
+I0819 00:15:46.171095 ZK/EL    node_watcher.cpp:74] Seen new node sequencer_1 with address 10.0.3.142:28095
+I0819 00:15:47.291281 ZK/EL    node_watcher.cpp:74] Seen new node gateway with address 10.0.3.159:25214
+I0819 00:15:48.025904 ZK/EL    node_watcher.cpp:74] Seen new node engine_3 with address 10.0.3.156:24370
+I0819 00:15:48.084417 ZK/EL    node_watcher.cpp:74] Seen new node storage_1 with address 10.0.3.173:28427
+I0819 00:15:48.351801 ZK/EL    node_watcher.cpp:74] Seen new node storage_2 with address 10.0.3.176:26602
+I0819 00:15:48.375984 ZK/EL    node_watcher.cpp:74] Seen new node engine_5 with address 10.0.3.150:26686
+I0819 00:15:49.449070 ZK/EL    node_watcher.cpp:74] Seen new node engine_1 with address 10.0.3.171:27227
+I0819 00:15:49.492667 ZK/EL    node_watcher.cpp:74] Seen new node engine_6 with address 10.0.3.180:20917
+I0819 00:15:49.557663 ZK/EL    node_watcher.cpp:74] Seen new node engine_2 with address 10.0.3.185:26034
+I0819 00:15:50.505035 ZK/EL    node_watcher.cpp:74] Seen new node storage_3 with address 10.0.3.221:24826
+I0819 00:15:58.112615 ZK/EL    node_watcher.cpp:74] Seen new node engine_7 with address 10.0.3.64:22706
+I0819 00:15:58.156996 ZK/EL    node_watcher.cpp:74] Seen new node engine_8 with address 10.0.3.62:27259
+I0819 00:16:00.080855 ZK/EL    node_watcher.cpp:74] Seen new node engine_4 with address 10.0.3.78:28575
+I0819 00:16:33.051010 ZK/EL    view.cpp:29] View 0 has 1 physical logs
+I0819 00:16:33.051054 ZK/EL    sequencer.cpp:22] Sequencer[2-N]: New view 0 created
+I0819 00:16:55.244516 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 17, 4 registered fds in total
+I0819 00:16:55.244521 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 19, 4 registered fds in total
+I0819 00:16:55.244569 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 1
+I0819 00:16:55.244576 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 1
+I0819 00:16:55.244587 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 1
+I0819 00:16:55.244603 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 1
+I0819 00:16:55.244629 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 20, 5 registered fds in total
+I0819 00:16:55.244650 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 2
+I0819 00:16:55.244655 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 2
+I0819 00:16:55.244696 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 21, 5 registered fds in total
+I0819 00:16:55.244712 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 2
+I0819 00:16:55.244716 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 2
+I0819 00:16:55.244755 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 22, 6 registered fds in total
+I0819 00:16:55.244768 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 3
+I0819 00:16:55.244773 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 3
+I0819 00:16:55.244780 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 23, 6 registered fds in total
+I0819 00:16:55.244796 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 3
+I0819 00:16:55.244801 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 3
+I0819 00:16:55.244824 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 26, 7 registered fds in total
+I0819 00:16:55.244851 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 27, 8 registered fds in total
+I0819 00:16:55.244868 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 28, 9 registered fds in total
+I0819 00:16:55.244868 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 25, 7 registered fds in total
+I0819 00:16:55.244876 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.244877 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 29, 10 registered fds in total
+I0819 00:16:55.244880 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 4
+I0819 00:16:55.244889 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 30, 11 registered fds in total
+I0819 00:16:55.244904 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 31, 12 registered fds in total
+I0819 00:16:55.244911 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 32, 13 registered fds in total
+I0819 00:16:55.244919 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 33, 14 registered fds in total
+I0819 00:16:55.244927 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 327681, total of type 327681 is 1
+W0819 00:16:55.244933 IO-0/EL  egress_hub.cpp:192] SequencerEgressHub[1]: No ready connections
+I0819 00:16:55.244967 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 24, 15 registered fds in total
+I0819 00:16:55.244978 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.244981 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 4
+I0819 00:16:55.245082 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.245097 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 1
+I0819 00:16:55.245109 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 5
+I0819 00:16:55.245114 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 2
+I0819 00:16:55.245161 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 26 is ready
+I0819 00:16:55.245198 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 27 is ready
+I0819 00:16:55.245211 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 6
+I0819 00:16:55.245245 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 7
+I0819 00:16:55.245257 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 3
+I0819 00:16:55.245264 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 8
+I0819 00:16:55.245267 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.245275 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 30 is ready
+I0819 00:16:55.245280 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 9
+I0819 00:16:55.245318 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 10
+I0819 00:16:55.245324 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 28 is ready
+I0819 00:16:55.245328 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 31 is ready
+I0819 00:16:55.245331 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 32 is ready
+I0819 00:16:55.245346 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 33 is ready
+I0819 00:16:55.245398 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 11
+I0819 00:16:55.245449 IO-0/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 29 is ready
+I0819 00:16:55.288428 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 34, 16 registered fds in total
+I0819 00:16:55.288436 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 35, 8 registered fds in total
+I0819 00:16:55.288477 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 5
+I0819 00:16:55.288479 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 5
+I0819 00:16:55.288485 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 5
+I0819 00:16:55.288486 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 5
+I0819 00:16:55.288536 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 36, 17 registered fds in total
+I0819 00:16:55.288546 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 6
+I0819 00:16:55.288549 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 6
+I0819 00:16:55.288594 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 37, 9 registered fds in total
+I0819 00:16:55.288607 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 6
+I0819 00:16:55.288611 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 6
+I0819 00:16:55.288643 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 39, 10 registered fds in total
+I0819 00:16:55.288652 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 7
+I0819 00:16:55.288656 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 7
+I0819 00:16:55.288676 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 38, 18 registered fds in total
+I0819 00:16:55.288690 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 41, 11 registered fds in total
+I0819 00:16:55.288697 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 8
+I0819 00:16:55.288707 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 262145, total of type 262145 is 8
+I0819 00:16:55.288696 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 7
+I0819 00:16:55.288718 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 7
+I0819 00:16:55.288767 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 40, 19 registered fds in total
+I0819 00:16:55.288792 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 8
+I0819 00:16:55.288799 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 262145, total of type 262145 is 8
+I0819 00:16:55.289461 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 42, 12 registered fds in total
+I0819 00:16:55.289477 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 43, 13 registered fds in total
+I0819 00:16:55.289486 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 44, 14 registered fds in total
+I0819 00:16:55.289500 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 45, 15 registered fds in total
+I0819 00:16:55.289514 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 46, 16 registered fds in total
+I0819 00:16:55.289529 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 47, 17 registered fds in total
+I0819 00:16:55.289543 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 48, 18 registered fds in total
+I0819 00:16:55.289552 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 49, 19 registered fds in total
+I0819 00:16:55.289557 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 327681, total of type 327681 is 1
+W0819 00:16:55.289572 IO-1/EL  egress_hub.cpp:192] SequencerEgressHub[1]: No ready connections
+I0819 00:16:55.289703 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.289723 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 1
+I0819 00:16:55.289735 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 5
+I0819 00:16:55.289752 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 2
+I0819 00:16:55.289765 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 6
+I0819 00:16:55.289770 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 3
+I0819 00:16:55.289817 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 42 is ready
+I0819 00:16:55.289825 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 43 is ready
+I0819 00:16:55.289828 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 44 is ready
+I0819 00:16:55.289850 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 7
+I0819 00:16:55.289877 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 8
+I0819 00:16:55.289885 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 9
+I0819 00:16:55.289890 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 10
+I0819 00:16:55.289897 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 4
+I0819 00:16:55.289965 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 11
+I0819 00:16:55.289974 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 5
+I0819 00:16:55.289983 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 45 is ready
+I0819 00:16:55.289987 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 47 is ready
+I0819 00:16:55.289991 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 46 is ready
+I0819 00:16:55.289995 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 48 is ready
+I0819 00:16:55.290010 IO-1/EL  egress_hub.cpp:143] SequencerEgressHub[1]: Socket 49 is ready
