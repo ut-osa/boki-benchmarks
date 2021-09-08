@@ -1,0 +1,901 @@
+I0908 00:42:20.450377 Main     thread.cpp:126] Register main thread: tid=11027
+I0908 00:42:20.472277 Main     server_base.cpp:145] ServerBase: Start 4 IO workers
+I0908 00:42:20.472274 ZK/EL    thread.cpp:62] Start thread: ZK/EL (tid=11121)
+I0908 00:42:20.499742 Main     io_uring.cpp:70] io_uring[0]: register 4096 fd slots
+I0908 00:42:20.499928 Main     io_uring.cpp:123] io_uring[0]: register fd 10, 1 registered fds in total
+I0908 00:42:20.499948 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.499962 Main     io_uring.cpp:123] io_uring[0]: register fd 9, 2 registered fds in total
+I0908 00:42:20.499965 Main     buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.500026 IO-0/EL  thread.cpp:62] Start thread: IO-0/EL (tid=11124)
+I0908 00:42:20.500113 IO-0/EL  io_worker.cpp:167] IO-0: Event loop starts
+I0908 00:42:20.523735 Main     io_uring.cpp:70] io_uring[1]: register 4096 fd slots
+I0908 00:42:20.523909 Main     io_uring.cpp:123] io_uring[1]: register fd 14, 1 registered fds in total
+I0908 00:42:20.523919 Main     buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.523925 Main     io_uring.cpp:123] io_uring[1]: register fd 13, 2 registered fds in total
+I0908 00:42:20.523929 Main     buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.523991 IO-1/EL  thread.cpp:62] Start thread: IO-1/EL (tid=11129)
+I0908 00:42:20.524066 IO-1/EL  io_worker.cpp:167] IO-1: Event loop starts
+I0908 00:42:20.551730 Main     io_uring.cpp:70] io_uring[2]: register 4096 fd slots
+I0908 00:42:20.551904 Main     io_uring.cpp:123] io_uring[2]: register fd 18, 1 registered fds in total
+I0908 00:42:20.551912 Main     buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.551917 Main     io_uring.cpp:123] io_uring[2]: register fd 17, 2 registered fds in total
+I0908 00:42:20.551919 Main     buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.551979 IO-2/EL  thread.cpp:62] Start thread: IO-2/EL (tid=11134)
+I0908 00:42:20.552075 IO-2/EL  io_worker.cpp:167] IO-2: Event loop starts
+I0908 00:42:20.583775 Main     io_uring.cpp:70] io_uring[3]: register 4096 fd slots
+I0908 00:42:20.583951 Main     io_uring.cpp:123] io_uring[3]: register fd 22, 1 registered fds in total
+I0908 00:42:20.583962 Main     buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.583970 Main     io_uring.cpp:123] io_uring[3]: register fd 21, 2 registered fds in total
+I0908 00:42:20.583974 Main     buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.584065 Main     func_config.cpp:140] Load configuration for function sqsQueueProducer[1]
+I0908 00:42:20.584079 Main     func_config.cpp:140] Load configuration for function sqsQueueConsumer[2]
+I0908 00:42:20.584084 Main     func_config.cpp:140] Load configuration for function sqsInitQueue[3]
+I0908 00:42:20.584031 IO-3/EL  thread.cpp:62] Start thread: IO-3/EL (tid=11139)
+I0908 00:42:20.584110 IO-3/EL  io_worker.cpp:167] IO-3: Event loop starts
+I0908 00:42:20.584112 Main     engine.cpp:109] Engine: Listen on /tmp/boki/ipc/engine.sock for IPC connections
+I0908 00:42:20.584193 Main     server_base.cpp:171] ServerBase: Listen on 10.0.2.150:28578 for message connections
+I0908 00:42:20.586360 Srv/EL   thread.cpp:62] Start thread: Srv/EL (tid=11142)
+I0908 00:42:20.586451 Srv/EL   server_base.cpp:103] ServerBase: Event loop starts
+I0908 00:42:20.589160 ZK/EL    node_watcher.cpp:74] Seen new node engine_3 with address 10.0.2.134:29903
+I0908 00:42:20.589301 ZK/EL    node_watcher.cpp:74] Seen new node engine_4 with address 10.0.2.133:26901
+I0908 00:42:20.589423 ZK/EL    node_watcher.cpp:74] Seen new node engine_1 with address 10.0.2.128:23812
+I0908 00:42:20.589540 ZK/EL    node_watcher.cpp:74] Seen new node engine_2 with address 10.0.2.150:28578
+I0908 00:42:20.589669 ZK/EL    node_watcher.cpp:74] Seen new node engine_7 with address 10.0.2.130:25146
+I0908 00:42:20.589826 ZK/EL    node_watcher.cpp:74] Seen new node engine_8 with address 10.0.2.131:24597
+I0908 00:42:20.589943 ZK/EL    node_watcher.cpp:74] Seen new node engine_5 with address 10.0.2.132:27541
+I0908 00:42:20.590060 ZK/EL    node_watcher.cpp:74] Seen new node engine_6 with address 10.0.2.129:22480
+I0908 00:42:20.590187 ZK/EL    node_watcher.cpp:74] Seen new node gateway with address 10.0.2.109:21798
+I0908 00:42:20.590248 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 26, 3 registered fds in total
+I0908 00:42:20.590256 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 25, 3 registered fds in total
+I0908 00:42:20.590249 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 27, 3 registered fds in total
+I0908 00:42:20.593459 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 29, 4 registered fds in total
+I0908 00:42:20.590254 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 28, 3 registered fds in total
+I0908 00:42:20.593491 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 32, 4 registered fds in total
+I0908 00:42:20.593477 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 30, 4 registered fds in total
+I0908 00:42:20.593511 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 34, 5 registered fds in total
+I0908 00:42:20.593472 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 31, 5 registered fds in total
+I0908 00:42:20.593524 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 36, 6 registered fds in total
+I0908 00:42:20.593520 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 35, 5 registered fds in total
+I0908 00:42:20.593539 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 37, 6 registered fds in total
+I0908 00:42:20.593548 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 39, 6 registered fds in total
+I0908 00:42:20.593518 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 33, 4 registered fds in total
+I0908 00:42:20.593564 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 41, 7 registered fds in total
+I0908 00:42:20.593572 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 42, 5 registered fds in total
+I0908 00:42:20.593540 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 38, 7 registered fds in total
+I0908 00:42:20.593580 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 43, 8 registered fds in total
+I0908 00:42:20.593585 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 44, 6 registered fds in total
+I0908 00:42:20.593589 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 45, 9 registered fds in total
+I0908 00:42:20.593564 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 40, 7 registered fds in total
+I0908 00:42:20.593603 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 48, 7 registered fds in total
+I0908 00:42:20.593603 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 46, 8 registered fds in total
+I0908 00:42:20.593600 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 47, 10 registered fds in total
+I0908 00:42:20.593613 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 49, 8 registered fds in total
+I0908 00:42:20.593618 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 51, 8 registered fds in total
+I0908 00:42:20.593614 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 65536, total of type 65536 is 1
+I0908 00:42:20.593629 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 50, 9 registered fds in total
+I0908 00:42:20.593631 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 53, 9 registered fds in total
+I0908 00:42:20.593648 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 54, 10 registered fds in total
+I0908 00:42:20.593630 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 52, 9 registered fds in total
+I0908 00:42:20.593660 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 55, 10 registered fds in total
+I0908 00:42:20.593668 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 56, 10 registered fds in total
+I0908 00:42:20.593653 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 65536, total of type 65536 is 1
+I0908 00:42:20.593674 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 65536, total of type 65536 is 1
+I0908 00:42:20.593675 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 65536, total of type 65536 is 1
+I0908 00:42:20.593879 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.593887 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.593897 IO-3/EL  buffer_pool.h:26] BufferPool[IO-3_Write]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.593903 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.593899 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.593922 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.593909 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.593936 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.593932 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 26 is ready
+I0908 00:42:20.593941 IO-3/EL  buffer_pool.h:26] BufferPool[IO-3_Write]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.593937 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.593984 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 1
+I0908 00:42:20.593979 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.593993 IO-3/EL  buffer_pool.h:26] BufferPool[IO-3_Write]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.594006 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 25 is ready
+I0908 00:42:20.594015 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 30 is ready
+I0908 00:42:20.594021 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594047 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.594052 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 35 is ready
+I0908 00:42:20.594054 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 39 is ready
+I0908 00:42:20.593941 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.594100 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 8
+I0908 00:42:20.594103 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.594107 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 41 is ready
+I0908 00:42:20.594110 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.594120 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594121 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 43 is ready
+I0908 00:42:20.594123 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.594188 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.593997 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.594206 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.593948 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.594223 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 8
+I0908 00:42:20.594235 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.594224 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.594229 IO-2/EL  buffer_pool.h:26] BufferPool[IO-2_Write]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594245 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 2
+I0908 00:42:20.594252 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.594257 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.594256 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594256 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 28 is ready
+I0908 00:42:20.594262 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 3
+I0908 00:42:20.594271 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.594279 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.594287 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 8
+I0908 00:42:20.594292 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.594301 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 9
+I0908 00:42:20.594309 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594319 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-0]: Allocate new buffer, current buffer count is 10
+I0908 00:42:20.594324 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.594417 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 31 is ready
+I0908 00:42:20.594435 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 29 is ready
+I0908 00:42:20.594438 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 37 is ready
+I0908 00:42:20.594440 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 40 is ready
+I0908 00:42:20.594442 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 56 is ready
+I0908 00:42:20.594444 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 51 is ready
+I0908 00:42:20.594446 IO-1/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 52 is ready
+I0908 00:42:20.594214 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 9
+I0908 00:42:20.594263 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 42 is ready
+I0908 00:42:20.594465 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-0]: Allocate new buffer, current buffer count is 10
+I0908 00:42:20.594263 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594471 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 33 is ready
+I0908 00:42:20.594488 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 4
+I0908 00:42:20.594492 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 44 is ready
+I0908 00:42:20.594500 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 9
+I0908 00:42:20.594503 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.594504 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 47 is ready
+I0908 00:42:20.594508 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-0]: Allocate new buffer, current buffer count is 10
+I0908 00:42:20.594510 IO-3/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 45 is ready
+I0908 00:42:20.594509 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 5
+I0908 00:42:20.594540 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 8
+I0908 00:42:20.594546 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 6
+I0908 00:42:20.594550 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 55 is ready
+I0908 00:42:20.594553 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 49 is ready
+I0908 00:42:20.594555 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 53 is ready
+I0908 00:42:20.594557 IO-2/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 48 is ready
+I0908 00:42:20.594559 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 9
+I0908 00:42:20.594601 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 7
+I0908 00:42:20.594612 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-0]: Allocate new buffer, current buffer count is 10
+I0908 00:42:20.594618 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 8
+I0908 00:42:20.594720 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 27 is ready
+I0908 00:42:20.594737 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 32 is ready
+I0908 00:42:20.594741 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 34 is ready
+I0908 00:42:20.594745 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 38 is ready
+I0908 00:42:20.594748 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 46 is ready
+I0908 00:42:20.594757 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 50 is ready
+I0908 00:42:20.594778 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 36 is ready
+I0908 00:42:20.594783 IO-0/EL  egress_hub.cpp:143] GatewayEgressHub: Socket 54 is ready
+I0908 00:42:22.652007 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 57, 11 registered fds in total
+I0908 00:42:22.652054 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 1
+I0908 00:42:22.652066 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 1
+I0908 00:42:22.652169 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.652177 IO-0/EL  worker_manager.cpp:21] WorkerManager: Launcher of func_id 1 connected
+I0908 00:42:22.652181 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 1
+I0908 00:42:22.652209 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 2
+I0908 00:42:22.652222 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 3
+I0908 00:42:22.652233 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 4
+I0908 00:42:22.652242 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 5
+I0908 00:42:22.652254 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 6
+I0908 00:42:22.652262 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 7
+I0908 00:42:22.652277 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 8
+I0908 00:42:22.652290 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 9
+I0908 00:42:22.652302 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 10
+I0908 00:42:22.652311 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 11
+I0908 00:42:22.652320 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 12
+I0908 00:42:22.652329 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 13
+I0908 00:42:22.652340 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 14
+I0908 00:42:22.652347 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 15
+I0908 00:42:22.652358 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 16
+I0908 00:42:22.652365 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 17
+I0908 00:42:22.652397 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 18
+I0908 00:42:22.652409 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 19
+I0908 00:42:22.652416 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 20
+I0908 00:42:22.652431 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 21
+I0908 00:42:22.652442 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 22
+I0908 00:42:22.652449 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 23
+I0908 00:42:22.652460 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 24
+I0908 00:42:22.652469 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 25
+I0908 00:42:22.652478 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 26
+I0908 00:42:22.652487 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 27
+I0908 00:42:22.652496 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 28
+I0908 00:42:22.652505 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 29
+I0908 00:42:22.652517 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 30
+I0908 00:42:22.652525 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 31
+I0908 00:42:22.652540 IO-0/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 1 with client_id 32
+I0908 00:42:22.652655 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 9
+I0908 00:42:22.652667 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 10
+I0908 00:42:22.652675 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 11
+I0908 00:42:22.652685 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 12
+I0908 00:42:22.652700 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 13
+I0908 00:42:22.652710 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 14
+I0908 00:42:22.652723 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 15
+I0908 00:42:22.652740 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 16
+I0908 00:42:22.652754 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 17
+I0908 00:42:22.652765 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 18
+I0908 00:42:22.652783 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 19
+I0908 00:42:22.652795 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 20
+I0908 00:42:22.652803 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 21
+I0908 00:42:22.652818 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 22
+I0908 00:42:22.652830 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 23
+I0908 00:42:22.652847 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 24
+I0908 00:42:22.652863 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 25
+I0908 00:42:22.652874 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 26
+I0908 00:42:22.652883 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 27
+I0908 00:42:22.652889 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 28
+I0908 00:42:22.652899 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 29
+I0908 00:42:22.652910 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 30
+I0908 00:42:22.652919 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 31
+I0908 00:42:22.652924 IO-0/EL  buffer_pool.h:26] BufferPool[IO-0_Write]: Allocate new buffer, current buffer count is 32
+I0908 00:42:22.659876 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 58, 11 registered fds in total
+I0908 00:42:22.659891 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 60, 11 registered fds in total
+I0908 00:42:22.659891 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 59, 11 registered fds in total
+I0908 00:42:22.659939 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 1
+I0908 00:42:22.659948 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 1
+I0908 00:42:22.659948 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 1
+I0908 00:42:22.659955 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 1
+I0908 00:42:22.659954 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 1
+I0908 00:42:22.659964 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 1
+I0908 00:42:22.659994 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.660000 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 3 connected
+I0908 00:42:22.660025 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.660033 IO-3/EL  dispatcher.cpp:35] Dispatcher[1]: min_workers=32
+I0908 00:42:22.660036 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 2 connected
+I0908 00:42:22.660042 IO-3/EL  dispatcher.cpp:39] Dispatcher[1]: max_workers=32
+I0908 00:42:22.660076 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 62, 12 registered fds in total
+I0908 00:42:22.660075 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 61, 12 registered fds in total
+I0908 00:42:22.660086 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 63, 13 registered fds in total
+I0908 00:42:22.660108 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 2
+I0908 00:42:22.660108 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.660113 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 6 connected
+I0908 00:42:22.683695 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 64, 13 registered fds in total
+I0908 00:42:22.683757 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 69, 14 registered fds in total
+I0908 00:42:22.683764 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 2
+I0908 00:42:22.683785 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 2
+I0908 00:42:22.683794 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 3
+I0908 00:42:22.683695 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 65, 12 registered fds in total
+I0908 00:42:22.683801 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.683796 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 66, 12 registered fds in total
+I0908 00:42:22.683806 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 7 connected
+I0908 00:42:22.683816 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 76, 13 registered fds in total
+I0908 00:42:22.683817 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 2
+I0908 00:42:22.683827 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 2
+I0908 00:42:22.683836 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 78, 15 registered fds in total
+I0908 00:42:22.683844 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 79, 16 registered fds in total
+I0908 00:42:22.683844 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 2
+I0908 00:42:22.683851 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 73, 17 registered fds in total
+I0908 00:42:22.683854 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 3
+I0908 00:42:22.683869 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 4
+I0908 00:42:22.683873 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 5
+I0908 00:42:22.683880 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.683887 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 13 connected
+I0908 00:42:22.683909 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 86, 13 registered fds in total
+I0908 00:42:22.683914 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.683923 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 88, 14 registered fds in total
+I0908 00:42:22.683930 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 11 connected
+I0908 00:42:22.683943 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 70, 15 registered fds in total
+I0908 00:42:22.683951 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 91, 18 registered fds in total
+I0908 00:42:22.683953 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 3
+I0908 00:42:22.683964 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 94, 19 registered fds in total
+I0908 00:42:22.683970 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 3
+I0908 00:42:22.683975 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 4
+I0908 00:42:22.683980 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.683981 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 80, 20 registered fds in total
+I0908 00:42:22.683983 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 8 connected
+I0908 00:42:22.683987 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 4
+I0908 00:42:22.683997 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 98, 16 registered fds in total
+I0908 00:42:22.684012 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 100, 17 registered fds in total
+I0908 00:42:22.684019 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 6
+I0908 00:42:22.684025 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 7
+I0908 00:42:22.684026 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 74, 18 registered fds in total
+I0908 00:42:22.684030 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 4
+I0908 00:42:22.684045 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 5
+I0908 00:42:22.684052 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 6
+I0908 00:42:22.684086 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684093 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 22 connected
+I0908 00:42:22.684116 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 104, 21 registered fds in total
+I0908 00:42:22.684128 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 105, 22 registered fds in total
+I0908 00:42:22.684140 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 8
+I0908 00:42:22.684143 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684149 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 4 connected
+I0908 00:42:22.684158 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 84, 23 registered fds in total
+I0908 00:42:22.684162 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 9
+I0908 00:42:22.684163 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 106, 19 registered fds in total
+I0908 00:42:22.684166 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 5
+I0908 00:42:22.684175 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 107, 20 registered fds in total
+I0908 00:42:22.684185 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 81, 21 registered fds in total
+I0908 00:42:22.684190 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 5
+I0908 00:42:22.684210 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 7
+I0908 00:42:22.684214 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 8
+I0908 00:42:22.684222 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684225 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 20 connected
+I0908 00:42:22.684236 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 108, 22 registered fds in total
+I0908 00:42:22.684247 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 109, 23 registered fds in total
+I0908 00:42:22.684256 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 85, 24 registered fds in total
+I0908 00:42:22.684260 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 6
+I0908 00:42:22.684274 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 9
+I0908 00:42:22.684278 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 10
+I0908 00:42:22.684341 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684351 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 17 connected
+I0908 00:42:22.684370 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 110, 25 registered fds in total
+I0908 00:42:22.684382 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 111, 26 registered fds in total
+I0908 00:42:22.684393 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 92, 27 registered fds in total
+I0908 00:42:22.684399 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 7
+I0908 00:42:22.684420 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 11
+I0908 00:42:22.684426 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 12
+I0908 00:42:22.684599 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 67, 14 registered fds in total
+I0908 00:42:22.684608 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 3
+I0908 00:42:22.684613 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 2
+I0908 00:42:22.684611 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 68, 14 registered fds in total
+I0908 00:42:22.684622 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 3
+I0908 00:42:22.684629 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 2
+I0908 00:42:22.684669 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684679 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 1 connected
+I0908 00:42:22.684700 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 112, 15 registered fds in total
+I0908 00:42:22.684731 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 113, 16 registered fds in total
+I0908 00:42:22.684750 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 72, 17 registered fds in total
+I0908 00:42:22.684758 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 3
+I0908 00:42:22.684766 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684777 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 4
+I0908 00:42:22.684777 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 5 connected
+I0908 00:42:22.684782 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 5
+I0908 00:42:22.684796 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684799 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 10 connected
+I0908 00:42:22.684799 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 114, 15 registered fds in total
+I0908 00:42:22.684810 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 116, 16 registered fds in total
+I0908 00:42:22.684815 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 115, 18 registered fds in total
+I0908 00:42:22.684825 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 117, 19 registered fds in total
+I0908 00:42:22.684828 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 4
+I0908 00:42:22.684834 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 77, 20 registered fds in total
+I0908 00:42:22.684839 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 4
+I0908 00:42:22.684850 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 6
+I0908 00:42:22.684854 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 7
+I0908 00:42:22.684854 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 71, 17 registered fds in total
+I0908 00:42:22.684859 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 5
+I0908 00:42:22.684872 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 3
+I0908 00:42:22.684890 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.684904 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 12 connected
+I0908 00:42:22.684935 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 118, 21 registered fds in total
+I0908 00:42:22.684951 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 119, 22 registered fds in total
+I0908 00:42:22.684966 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 83, 23 registered fds in total
+I0908 00:42:22.684971 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 5
+I0908 00:42:22.684991 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 8
+I0908 00:42:22.685000 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 9
+I0908 00:42:22.685125 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685131 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685145 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 24 connected
+I0908 00:42:22.685158 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 9 connected
+I0908 00:42:22.685191 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 120, 28 registered fds in total
+I0908 00:42:22.685192 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685199 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 15 connected
+I0908 00:42:22.685205 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 121, 18 registered fds in total
+I0908 00:42:22.685207 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 122, 29 registered fds in total
+I0908 00:42:22.685216 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 123, 24 registered fds in total
+I0908 00:42:22.685223 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 124, 19 registered fds in total
+I0908 00:42:22.685229 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 125, 25 registered fds in total
+I0908 00:42:22.685226 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 97, 30 registered fds in total
+I0908 00:42:22.685246 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 75, 20 registered fds in total
+I0908 00:42:22.685240 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 89, 26 registered fds in total
+I0908 00:42:22.685249 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 8
+I0908 00:42:22.685253 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 4
+I0908 00:42:22.685253 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 6
+I0908 00:42:22.685265 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 13
+I0908 00:42:22.685271 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 10
+I0908 00:42:22.685278 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 14
+I0908 00:42:22.685284 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 11
+I0908 00:42:22.685346 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685367 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 19 connected
+I0908 00:42:22.685382 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 126, 27 registered fds in total
+I0908 00:42:22.685396 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 127, 28 registered fds in total
+I0908 00:42:22.685416 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 95, 29 registered fds in total
+I0908 00:42:22.685268 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 6
+I0908 00:42:22.685431 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 7
+I0908 00:42:22.685437 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 7
+I0908 00:42:22.685443 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685446 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 21 connected
+I0908 00:42:22.685453 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 12
+I0908 00:42:22.685457 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 13
+I0908 00:42:22.685464 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685467 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 26 connected
+I0908 00:42:22.685552 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.685563 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 30 connected
+I0908 00:42:22.686028 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.686040 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 16 connected
+I0908 00:42:22.707699 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 131, 30 registered fds in total
+I0908 00:42:22.707699 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 130, 24 registered fds in total
+I0908 00:42:22.707740 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 132, 31 registered fds in total
+I0908 00:42:22.707699 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 129, 31 registered fds in total
+I0908 00:42:22.707752 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 133, 25 registered fds in total
+I0908 00:42:22.707699 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 128, 21 registered fds in total
+I0908 00:42:22.707765 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 134, 32 registered fds in total
+I0908 00:42:22.707768 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 90, 26 registered fds in total
+I0908 00:42:22.707756 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 101, 32 registered fds in total
+I0908 00:42:22.707773 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 6
+I0908 00:42:22.707778 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 8
+I0908 00:42:22.707783 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 103, 33 registered fds in total
+I0908 00:42:22.707800 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 10
+I0908 00:42:22.707783 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 135, 22 registered fds in total
+I0908 00:42:22.707814 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 14
+I0908 00:42:22.707818 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 11
+I0908 00:42:22.707821 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 15
+I0908 00:42:22.707811 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 9
+I0908 00:42:22.707832 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 82, 23 registered fds in total
+I0908 00:42:22.707838 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 5
+I0908 00:42:22.707852 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 15
+I0908 00:42:22.707856 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 8
+I0908 00:42:22.707861 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 16
+I0908 00:42:22.707862 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 9
+I0908 00:42:22.707867 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.707872 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 25 connected
+I0908 00:42:22.707872 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.707877 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 32 connected
+I0908 00:42:22.707889 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 136, 27 registered fds in total
+I0908 00:42:22.707894 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 137, 34 registered fds in total
+I0908 00:42:22.707902 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 138, 28 registered fds in total
+I0908 00:42:22.707906 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 139, 35 registered fds in total
+I0908 00:42:22.707915 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 12
+I0908 00:42:22.707923 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 17
+I0908 00:42:22.707946 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 96, 29 registered fds in total
+I0908 00:42:22.707951 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 13
+I0908 00:42:22.707956 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 7
+I0908 00:42:22.707974 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.707987 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 31 connected
+I0908 00:42:22.708017 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 140, 33 registered fds in total
+I0908 00:42:22.708032 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 141, 34 registered fds in total
+I0908 00:42:22.708050 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 16
+I0908 00:42:22.708086 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708091 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 14 connected
+I0908 00:42:22.708104 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 142, 24 registered fds in total
+I0908 00:42:22.708114 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 143, 25 registered fds in total
+I0908 00:42:22.708125 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 87, 26 registered fds in total
+I0908 00:42:22.708129 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 6
+I0908 00:42:22.708155 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 10
+I0908 00:42:22.708169 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 11
+I0908 00:42:22.708176 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708180 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 18 connected
+I0908 00:42:22.708190 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 144, 27 registered fds in total
+I0908 00:42:22.708198 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 145, 28 registered fds in total
+I0908 00:42:22.708211 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 93, 29 registered fds in total
+I0908 00:42:22.708216 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 7
+I0908 00:42:22.708235 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 12
+I0908 00:42:22.708239 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 13
+I0908 00:42:22.708292 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708297 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 23 connected
+I0908 00:42:22.708323 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 146, 30 registered fds in total
+I0908 00:42:22.708335 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 147, 31 registered fds in total
+I0908 00:42:22.708345 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 99, 32 registered fds in total
+I0908 00:42:22.708349 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 8
+I0908 00:42:22.708368 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 14
+I0908 00:42:22.708378 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 15
+I0908 00:42:22.708432 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708447 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 27 connected
+I0908 00:42:22.708449 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708455 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 28 connected
+I0908 00:42:22.708468 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 148, 30 registered fds in total
+I0908 00:42:22.708474 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 149, 33 registered fds in total
+I0908 00:42:22.708483 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 150, 31 registered fds in total
+I0908 00:42:22.708486 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 151, 34 registered fds in total
+I0908 00:42:22.708497 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 102, 32 registered fds in total
+I0908 00:42:22.708506 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 16
+I0908 00:42:22.708507 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 8
+I0908 00:42:22.708523 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 14
+I0908 00:42:22.708533 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 15
+I0908 00:42:22.708577 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:22.708590 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 1, client_id 29 connected
+I0908 00:42:22.708612 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 152, 33 registered fds in total
+I0908 00:42:22.708629 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 153, 34 registered fds in total
+I0908 00:42:22.708655 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 16
+I0908 00:42:25.582925 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 154, 35 registered fds in total
+I0908 00:42:25.582951 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 17
+I0908 00:42:25.582957 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 9
+I0908 00:42:25.583093 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.583109 IO-1/EL  worker_manager.cpp:21] WorkerManager: Launcher of func_id 2 connected
+I0908 00:42:25.583114 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 33
+I0908 00:42:25.583139 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 34
+I0908 00:42:25.583151 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 35
+I0908 00:42:25.583160 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 36
+I0908 00:42:25.583171 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 37
+I0908 00:42:25.583179 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 38
+I0908 00:42:25.583199 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 39
+I0908 00:42:25.583210 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 40
+I0908 00:42:25.583220 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 41
+I0908 00:42:25.583235 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 42
+I0908 00:42:25.583242 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 43
+I0908 00:42:25.583251 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 44
+I0908 00:42:25.583263 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 45
+I0908 00:42:25.583270 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 46
+I0908 00:42:25.583281 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 47
+I0908 00:42:25.583288 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 48
+I0908 00:42:25.583304 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 49
+I0908 00:42:25.583345 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 50
+I0908 00:42:25.583356 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 51
+I0908 00:42:25.583365 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 52
+I0908 00:42:25.583381 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 53
+I0908 00:42:25.583392 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 54
+I0908 00:42:25.583401 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 55
+I0908 00:42:25.583412 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 56
+I0908 00:42:25.583419 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 57
+I0908 00:42:25.583432 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 58
+I0908 00:42:25.583441 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 59
+I0908 00:42:25.583453 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 60
+I0908 00:42:25.583467 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 61
+I0908 00:42:25.583480 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 62
+I0908 00:42:25.583494 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 63
+I0908 00:42:25.583506 IO-1/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 2 with client_id 64
+I0908 00:42:25.583592 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 8
+I0908 00:42:25.583600 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 9
+I0908 00:42:25.583605 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 10
+I0908 00:42:25.583612 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 11
+I0908 00:42:25.583619 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 12
+I0908 00:42:25.583653 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 13
+I0908 00:42:25.583664 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 14
+I0908 00:42:25.583669 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 15
+I0908 00:42:25.583675 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 16
+I0908 00:42:25.583681 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 17
+I0908 00:42:25.583693 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 18
+I0908 00:42:25.583702 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 19
+I0908 00:42:25.583710 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 20
+I0908 00:42:25.583714 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 21
+I0908 00:42:25.583728 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 22
+I0908 00:42:25.583738 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 23
+I0908 00:42:25.583743 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 24
+I0908 00:42:25.583747 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 25
+I0908 00:42:25.583751 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 26
+I0908 00:42:25.583756 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 27
+I0908 00:42:25.583765 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 28
+I0908 00:42:25.583777 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 29
+I0908 00:42:25.583788 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 30
+I0908 00:42:25.583797 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 31
+I0908 00:42:25.583806 IO-1/EL  buffer_pool.h:26] BufferPool[IO-1_Write]: Allocate new buffer, current buffer count is 32
+I0908 00:42:25.590666 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 155, 35 registered fds in total
+I0908 00:42:25.590677 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 156, 35 registered fds in total
+I0908 00:42:25.590689 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 17
+I0908 00:42:25.590692 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 17
+I0908 00:42:25.590695 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 9
+I0908 00:42:25.590695 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 157, 36 registered fds in total
+I0908 00:42:25.590699 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 9
+I0908 00:42:25.590704 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 18
+I0908 00:42:25.590710 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 10
+I0908 00:42:25.590708 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 158, 36 registered fds in total
+I0908 00:42:25.590721 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 18
+I0908 00:42:25.590727 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 10
+I0908 00:42:25.590738 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.590745 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 34 connected
+I0908 00:42:25.590747 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.590758 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 33 connected
+I0908 00:42:25.590760 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.590765 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 42 connected
+I0908 00:42:25.590765 IO-2/EL  dispatcher.cpp:35] Dispatcher[2]: min_workers=32
+I0908 00:42:25.590773 IO-2/EL  dispatcher.cpp:39] Dispatcher[2]: max_workers=32
+I0908 00:42:25.590793 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 161, 36 registered fds in total
+I0908 00:42:25.590805 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 164, 37 registered fds in total
+I0908 00:42:25.590805 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 163, 37 registered fds in total
+I0908 00:42:25.590805 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 162, 37 registered fds in total
+I0908 00:42:25.590816 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 159, 38 registered fds in total
+I0908 00:42:25.590821 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 10
+I0908 00:42:25.590820 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 166, 38 registered fds in total
+I0908 00:42:25.590820 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 165, 38 registered fds in total
+I0908 00:42:25.590839 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 18
+I0908 00:42:25.590844 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 19
+I0908 00:42:25.590846 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 19
+I0908 00:42:25.590847 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 19
+I0908 00:42:25.590879 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.590883 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 41 connected
+I0908 00:42:25.590907 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 167, 39 registered fds in total
+I0908 00:42:25.590926 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 168, 40 registered fds in total
+I0908 00:42:25.590935 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.590943 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 39 connected
+I0908 00:42:25.590945 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 20
+I0908 00:42:25.590969 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 172, 36 registered fds in total
+I0908 00:42:25.590985 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 174, 37 registered fds in total
+I0908 00:42:25.590992 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 171, 41 registered fds in total
+I0908 00:42:25.591000 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 160, 38 registered fds in total
+I0908 00:42:25.591003 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 169, 39 registered fds in total
+I0908 00:42:25.591005 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 10
+I0908 00:42:25.591010 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 20
+I0908 00:42:25.591011 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 21
+I0908 00:42:25.591016 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 11
+I0908 00:42:25.591018 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 11
+I0908 00:42:25.591022 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 18
+I0908 00:42:25.591027 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 19
+I0908 00:42:25.591060 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591063 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 170, 39 registered fds in total
+I0908 00:42:25.591064 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591070 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 20
+I0908 00:42:25.591076 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 11
+I0908 00:42:25.591080 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 40 connected
+I0908 00:42:25.591102 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 182, 39 registered fds in total
+I0908 00:42:25.591111 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591116 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 183, 40 registered fds in total
+I0908 00:42:25.591125 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 173, 41 registered fds in total
+I0908 00:42:25.591134 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 11
+I0908 00:42:25.591149 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 20
+I0908 00:42:25.591161 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 21
+I0908 00:42:25.591176 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591185 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 43 connected
+I0908 00:42:25.591065 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 36 connected
+I0908 00:42:25.591205 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 184, 42 registered fds in total
+I0908 00:42:25.591101 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591228 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 51 connected
+I0908 00:42:25.591251 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 187, 40 registered fds in total
+I0908 00:42:25.591267 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 188, 41 registered fds in total
+I0908 00:42:25.591282 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 175, 42 registered fds in total
+I0908 00:42:25.591291 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 12
+I0908 00:42:25.591317 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 21
+I0908 00:42:25.591327 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 22
+I0908 00:42:25.591338 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591342 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 44 connected
+I0908 00:42:25.591354 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 189, 43 registered fds in total
+I0908 00:42:25.591368 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 190, 44 registered fds in total
+I0908 00:42:25.591381 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 179, 45 registered fds in total
+I0908 00:42:25.591389 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 13
+I0908 00:42:25.591407 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 23
+I0908 00:42:25.591415 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 24
+I0908 00:42:25.591422 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591426 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 46 connected
+I0908 00:42:25.591437 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 191, 46 registered fds in total
+I0908 00:42:25.591453 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 192, 47 registered fds in total
+I0908 00:42:25.591476 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 25
+I0908 00:42:25.591129 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 35 connected
+I0908 00:42:25.591215 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 185, 43 registered fds in total
+I0908 00:42:25.591231 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 186, 42 registered fds in total
+I0908 00:42:25.591538 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 178, 44 registered fds in total
+I0908 00:42:25.591549 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 12
+I0908 00:42:25.591551 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 195, 43 registered fds in total
+I0908 00:42:25.591566 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 177, 44 registered fds in total
+I0908 00:42:25.591579 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 194, 40 registered fds in total
+I0908 00:42:25.591593 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 196, 41 registered fds in total
+I0908 00:42:25.591607 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 176, 42 registered fds in total
+I0908 00:42:25.591611 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 12
+I0908 00:42:25.591649 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 21
+I0908 00:42:25.591657 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 22
+I0908 00:42:25.591568 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 22
+I0908 00:42:25.591674 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 23
+I0908 00:42:25.591580 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 12
+I0908 00:42:25.591705 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 22
+I0908 00:42:25.591714 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 23
+I0908 00:42:25.591717 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591722 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 37 connected
+I0908 00:42:25.591737 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 197, 43 registered fds in total
+I0908 00:42:25.591748 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 198, 44 registered fds in total
+I0908 00:42:25.591757 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 180, 45 registered fds in total
+I0908 00:42:25.591761 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 13
+I0908 00:42:25.591776 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 23
+I0908 00:42:25.591780 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 24
+I0908 00:42:25.591826 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591835 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 47 connected
+I0908 00:42:25.591850 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 200, 45 registered fds in total
+I0908 00:42:25.591860 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 201, 46 registered fds in total
+I0908 00:42:25.591881 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 199, 48 registered fds in total
+I0908 00:42:25.591886 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 26
+I0908 00:42:25.591892 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 14
+I0908 00:42:25.591908 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.591912 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 50 connected
+I0908 00:42:25.591925 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 204, 46 registered fds in total
+I0908 00:42:25.591935 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 205, 47 registered fds in total
+I0908 00:42:25.591944 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 202, 48 registered fds in total
+I0908 00:42:25.591949 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 14
+I0908 00:42:25.591964 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 25
+I0908 00:42:25.591968 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 26
+I0908 00:42:25.591979 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 24
+I0908 00:42:25.592012 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 181, 47 registered fds in total
+I0908 00:42:25.592024 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 25
+I0908 00:42:25.592038 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 13
+I0908 00:42:25.592116 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592128 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 48 connected
+I0908 00:42:25.592142 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 208, 49 registered fds in total
+I0908 00:42:25.592152 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 209, 50 registered fds in total
+I0908 00:42:25.592165 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 207, 51 registered fds in total
+I0908 00:42:25.592174 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 15
+I0908 00:42:25.592191 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 27
+I0908 00:42:25.592200 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 28
+I0908 00:42:25.592220 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592233 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 49 connected
+I0908 00:42:25.592248 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592260 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 38 connected
+I0908 00:42:25.592263 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 210, 48 registered fds in total
+I0908 00:42:25.592272 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 212, 49 registered fds in total
+I0908 00:42:25.592276 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 211, 45 registered fds in total
+I0908 00:42:25.592284 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 203, 50 registered fds in total
+I0908 00:42:25.592287 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 213, 46 registered fds in total
+I0908 00:42:25.592292 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 14
+I0908 00:42:25.592296 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 193, 47 registered fds in total
+I0908 00:42:25.592299 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 13
+I0908 00:42:25.592309 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 26
+I0908 00:42:25.592314 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 24
+I0908 00:42:25.592317 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 27
+I0908 00:42:25.592319 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 25
+I0908 00:42:25.592332 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592339 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 54 connected
+I0908 00:42:25.592353 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 214, 51 registered fds in total
+I0908 00:42:25.592370 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 215, 52 registered fds in total
+I0908 00:42:25.592394 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 28
+I0908 00:42:25.592495 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592506 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 45 connected
+I0908 00:42:25.592521 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 216, 48 registered fds in total
+I0908 00:42:25.592530 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 217, 49 registered fds in total
+I0908 00:42:25.592544 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 206, 50 registered fds in total
+I0908 00:42:25.592549 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 14
+I0908 00:42:25.592562 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 26
+I0908 00:42:25.592569 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 27
+I0908 00:42:25.592590 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.592598 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 52 connected
+I0908 00:42:25.592607 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 218, 51 registered fds in total
+I0908 00:42:25.592614 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 219, 52 registered fds in total
+I0908 00:42:25.592623 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 28
+I0908 00:42:25.619844 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.619861 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 55 connected
+I0908 00:42:25.619869 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 221, 53 registered fds in total
+I0908 00:42:25.619880 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 29
+I0908 00:42:25.619886 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 15
+I0908 00:42:25.619886 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 227, 52 registered fds in total
+I0908 00:42:25.619899 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 228, 53 registered fds in total
+I0908 00:42:25.619921 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 223, 54 registered fds in total
+I0908 00:42:25.619922 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 222, 53 registered fds in total
+I0908 00:42:25.619938 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.619947 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 59 connected
+I0908 00:42:25.619929 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 16
+I0908 00:42:25.619941 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 29
+I0908 00:42:25.619967 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 229, 54 registered fds in total
+I0908 00:42:25.619970 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 15
+I0908 00:42:25.619974 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 29
+I0908 00:42:25.619980 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 230, 55 registered fds in total
+I0908 00:42:25.619980 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 30
+I0908 00:42:25.619999 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 225, 56 registered fds in total
+I0908 00:42:25.620010 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.620014 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 16
+I0908 00:42:25.620001 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.620036 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 30
+I0908 00:42:25.620024 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 56 connected
+I0908 00:42:25.620052 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 31
+I0908 00:42:25.620064 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.620064 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 233, 55 registered fds in total
+I0908 00:42:25.620068 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 60 connected
+I0908 00:42:25.620079 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 234, 56 registered fds in total
+I0908 00:42:25.620090 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 235, 57 registered fds in total
+I0908 00:42:25.620096 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 231, 57 registered fds in total
+I0908 00:42:25.620102 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 17
+I0908 00:42:25.620105 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 236, 58 registered fds in total
+I0908 00:42:25.620128 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 32
+I0908 00:42:25.620131 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 31
+I0908 00:42:25.620036 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 63 connected
+I0908 00:42:25.620191 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 32
+I0908 00:42:25.620204 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.620208 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 53 connected
+I0908 00:42:25.620208 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 237, 54 registered fds in total
+I0908 00:42:25.620224 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 238, 58 registered fds in total
+I0908 00:42:25.620225 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 239, 55 registered fds in total
+I0908 00:42:25.620236 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 240, 59 registered fds in total
+I0908 00:42:25.620240 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 226, 56 registered fds in total
+I0908 00:42:25.620245 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 16
+I0908 00:42:25.620252 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 33
+I0908 00:42:25.620258 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 30
+I0908 00:42:25.620269 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 31
+I0908 00:42:25.620274 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:25.620277 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 62 connected
+I0908 00:42:25.620289 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 241, 57 registered fds in total
+I0908 00:42:25.620299 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 242, 58 registered fds in total
+I0908 00:42:25.620314 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 32
+I0908 00:42:26.042542 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 243, 59 registered fds in total
+I0908 00:42:26.042566 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 33
+I0908 00:42:26.042572 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 17
+I0908 00:42:26.042698 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.042708 IO-2/EL  worker_manager.cpp:21] WorkerManager: Launcher of func_id 3 connected
+I0908 00:42:26.042712 IO-2/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 3 with client_id 65
+I0908 00:42:26.042734 IO-2/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 3 with client_id 66
+I0908 00:42:26.042744 IO-2/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 3 with client_id 67
+I0908 00:42:26.042752 IO-2/EL  worker_manager.cpp:128] WorkerManager: Request new FuncWorker for func_id 3 with client_id 68
+I0908 00:42:26.050221 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 244, 59 registered fds in total
+I0908 00:42:26.050246 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 33
+I0908 00:42:26.050242 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 245, 60 registered fds in total
+I0908 00:42:26.050254 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 3145728, total of type 3145728 is 17
+I0908 00:42:26.050259 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 34
+I0908 00:42:26.050267 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 3145728, total of type 3145728 is 18
+I0908 00:42:26.050304 IO-0/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.050300 IO-3/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.050322 IO-0/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 3, client_id 65 connected
+I0908 00:42:26.050327 IO-3/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 3, client_id 68 connected
+I0908 00:42:26.050316 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 247, 60 registered fds in total
+I0908 00:42:26.050341 IO-3/EL  dispatcher.cpp:35] Dispatcher[3]: min_workers=4
+I0908 00:42:26.050345 IO-3/EL  dispatcher.cpp:39] Dispatcher[3]: max_workers=4
+I0908 00:42:26.050345 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 34
+I0908 00:42:26.050355 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 3145728, total of type 3145728 is 18
+I0908 00:42:26.050377 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 248, 60 registered fds in total
+I0908 00:42:26.050377 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 249, 61 registered fds in total
+I0908 00:42:26.050400 IO-2/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.050410 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 251, 62 registered fds in total
+I0908 00:42:26.050414 IO-2/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 3, client_id 67 connected
+I0908 00:42:26.050393 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 250, 61 registered fds in total
+I0908 00:42:26.050439 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-32]: Allocate new buffer, current buffer count is 35
+I0908 00:42:26.050447 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-32]: Allocate new buffer, current buffer count is 34
+I0908 00:42:26.050441 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 252, 61 registered fds in total
+I0908 00:42:26.050466 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 253, 62 registered fds in total
+I0908 00:42:26.050487 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-32]: Allocate new buffer, current buffer count is 35
+I0908 00:42:26.599760 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.599777 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 57 connected
+I0908 00:42:26.599814 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 254, 49 registered fds in total
+I0908 00:42:26.599827 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 255, 50 registered fds in total
+I0908 00:42:26.599840 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 220, 51 registered fds in total
+I0908 00:42:26.599849 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 15
+I0908 00:42:26.599867 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 27
+I0908 00:42:26.599873 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 28
+I0908 00:42:26.599882 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.599889 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 61 connected
+I0908 00:42:26.615648 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 256, 52 registered fds in total
+I0908 00:42:26.615662 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 257, 53 registered fds in total
+I0908 00:42:26.615672 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 224, 54 registered fds in total
+I0908 00:42:26.615679 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 16
+I0908 00:42:26.615698 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 29
+I0908 00:42:26.615706 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 30
+I0908 00:42:26.615797 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.615804 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 58 connected
+I0908 00:42:26.615814 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 258, 55 registered fds in total
+I0908 00:42:26.615825 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 259, 56 registered fds in total
+I0908 00:42:26.615837 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 232, 57 registered fds in total
+I0908 00:42:26.615840 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 17
+I0908 00:42:26.615859 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 31
+I0908 00:42:26.615866 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 32
+I0908 00:42:26.615920 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.615936 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 2, client_id 64 connected
+I0908 00:42:26.615964 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 260, 58 registered fds in total
+I0908 00:42:26.615981 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 261, 59 registered fds in total
+I0908 00:42:26.615994 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 246, 60 registered fds in total
+I0908 00:42:26.616002 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 3145728, total of type 3145728 is 18
+I0908 00:42:26.616024 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 33
+I0908 00:42:26.616033 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 34
+I0908 00:42:26.616091 IO-1/EL  engine.cpp:183] Engine: Receive new handshake message from message connection
+I0908 00:42:26.616100 IO-1/EL  worker_manager.cpp:58] WorkerManager: FuncWorker of func_id 3, client_id 66 connected
+I0908 00:42:26.616124 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 262, 61 registered fds in total
+I0908 00:42:26.616136 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 263, 62 registered fds in total
+I0908 00:42:26.616151 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-32]: Allocate new buffer, current buffer count is 35
+I0908 00:43:34.839520 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 265, 63 registered fds in total
+I0908 00:43:34.839556 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 1
+I0908 00:43:34.839565 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 0, total of type 0 is 1
+I0908 00:43:34.839520 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 264, 63 registered fds in total
+I0908 00:43:34.839584 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 1
+I0908 00:43:34.839600 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 0, total of type 0 is 1
+I0908 00:43:34.839626 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 266, 63 registered fds in total
+I0908 00:43:34.839664 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-1]: Allocate new buffer, current buffer count is 1
+I0908 00:43:34.839670 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 0, total of type 0 is 1
+I0908 00:43:34.839785 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 267, 62 registered fds in total
+I0908 00:43:34.839802 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-1]: Allocate new buffer, current buffer count is 1
+I0908 00:43:34.839808 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 0, total of type 0 is 1
+I0908 00:43:34.839823 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 268, 64 registered fds in total
+I0908 00:43:34.839866 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 2
+I0908 00:43:34.839873 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 0, total of type 0 is 2
+I0908 00:43:34.839885 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 269, 64 registered fds in total
+I0908 00:43:34.839905 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 2
+I0908 00:43:34.839910 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 0, total of type 0 is 2
+I0908 00:43:34.840002 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 270, 64 registered fds in total
+I0908 00:43:34.840014 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 271, 63 registered fds in total
+I0908 00:43:34.840020 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-1]: Allocate new buffer, current buffer count is 2
+I0908 00:43:34.840053 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 0, total of type 0 is 2
+I0908 00:43:34.840056 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-1]: Allocate new buffer, current buffer count is 2
+I0908 00:43:34.840063 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 0, total of type 0 is 2
+I0908 00:43:34.858049 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 273, 65 registered fds in total
+I0908 00:43:34.858055 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 272, 65 registered fds in total
+I0908 00:43:34.858070 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 3
+I0908 00:43:34.858075 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 0, total of type 0 is 3
+I0908 00:43:34.858076 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 3
+I0908 00:43:34.858083 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 0, total of type 0 is 3
+I0908 00:43:34.858082 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 274, 65 registered fds in total
+I0908 00:43:34.858097 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 275, 64 registered fds in total
+I0908 00:43:34.858101 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-1]: Allocate new buffer, current buffer count is 3
+I0908 00:43:34.858108 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-1]: Allocate new buffer, current buffer count is 3
+I0908 00:43:34.858123 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 0, total of type 0 is 3
+I0908 00:43:34.858127 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 0, total of type 0 is 3
+I0908 00:43:34.858160 IO-1/EL  io_uring.cpp:123] io_uring[1]: register fd 277, 66 registered fds in total
+I0908 00:43:34.858165 IO-0/EL  io_uring.cpp:123] io_uring[0]: register fd 276, 66 registered fds in total
+I0908 00:43:34.858173 IO-1/EL  buffer_pool.h:26] BufferPool[IOUring[1]-1]: Allocate new buffer, current buffer count is 4
+I0908 00:43:34.858175 IO-0/EL  buffer_pool.h:26] BufferPool[IOUring[0]-1]: Allocate new buffer, current buffer count is 4
+I0908 00:43:34.858178 IO-1/EL  io_worker.cpp:101] IO-1: New connection of type 0, total of type 0 is 4
+I0908 00:43:34.858180 IO-0/EL  io_worker.cpp:101] IO-0: New connection of type 0, total of type 0 is 4
+I0908 00:43:34.858278 IO-3/EL  io_uring.cpp:123] io_uring[3]: register fd 279, 65 registered fds in total
+I0908 00:43:34.858284 IO-2/EL  io_uring.cpp:123] io_uring[2]: register fd 278, 66 registered fds in total
+I0908 00:43:34.858292 IO-3/EL  buffer_pool.h:26] BufferPool[IOUring[3]-1]: Allocate new buffer, current buffer count is 4
+I0908 00:43:34.858295 IO-2/EL  buffer_pool.h:26] BufferPool[IOUring[2]-1]: Allocate new buffer, current buffer count is 4
+I0908 00:43:34.858296 IO-3/EL  io_worker.cpp:101] IO-3: New connection of type 0, total of type 0 is 4
+I0908 00:43:34.858299 IO-2/EL  io_worker.cpp:101] IO-2: New connection of type 0, total of type 0 is 4

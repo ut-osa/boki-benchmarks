@@ -4,6 +4,7 @@ ROOT_DIR=`realpath $(dirname $0)/..`
 # Message queue workload for BokiQueue and Pulsar
 RUN_QUEUE_BOKI=y
 RUN_QUEUE_PUSLAR=y
+RUN_QUEUE_SQS=y
 
 # Retwis workload for BokiStore and MongoDB
 RUN_STORE_BOKI=y
@@ -54,6 +55,26 @@ $HELPER_SCRIPT stop-machines --base-dir=$BASE_DIR
 echo "====== Finish running Pulsar experiments ======"
 else
 echo "====== Skip Pulsar experiments ======"
+fi
+echo ""
+
+
+if [[ ! -z $RUN_QUEUE_SQS ]] && [[ $RUN_QUEUE_SQS == "y" ]]; then
+echo "====== Start running SQS experiments ======"
+
+BASE_DIR=$ROOT_DIR/experiments/queue/sqs
+
+$HELPER_SCRIPT start-machines --base-dir=$BASE_DIR --instance-iam-role $BOKI_MACHINE_IAM
+
+$BASE_DIR/run_once.sh p128c128 10 128 128
+$BASE_DIR/run_once.sh p128c32  24 128 32
+$BASE_DIR/run_once.sh p32c128  7  32  128
+
+$HELPER_SCRIPT stop-machines --base-dir=$BASE_DIR
+
+echo "====== Finish running SQS experiments ======"
+else
+echo "====== Skip SQS experiments ======"
 fi
 echo ""
 
